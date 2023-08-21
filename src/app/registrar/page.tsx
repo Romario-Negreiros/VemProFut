@@ -15,6 +15,7 @@ const d = ["Corinthians", "PSG"];
 interface Inputs {
   name: string;
   email: string;
+  teams: string;
 }
 
 const inputValidationOptions = {
@@ -27,7 +28,7 @@ const inputValidationOptions = {
 
 export default function Register() {
   const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [selectedTeams, setSelectedTeams] = useState<string[]>(d);
   const { register, handleSubmit, reset } = useForm<Inputs>();
 
@@ -60,13 +61,22 @@ export default function Register() {
     }
   };
 
-  const addSelectedTeam = (team: string) => {
-    if (selectedTeams.length >= 3) {
-      alert("Só pode tres porra n sabe ler");
-      return;
-    }
+  const addSelectedTeam = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter" || event.key === "Unidentified") {
+      if (selectedTeams.length >= 3) {
+        alert("n pode mais q 3");
+        return;
+      }
 
-    setSelectedTeams([...selectedTeams, team]);
+      const selectedTeam = event.currentTarget.value;
+      if (!teams.some((team) => team.toLowerCase().includes(selectedTeam.toLowerCase()))) {
+        alert("time n existe ou n cobrido por nois");
+        return;
+      }
+
+      setSelectedTeams([...selectedTeams, selectedTeam]);
+      event.currentTarget.value = "";
+    }
   };
 
   const removeSelectedTeam = (team: string) => {
@@ -74,15 +84,16 @@ export default function Register() {
   };
 
   if (isLoading) {
+    return <div>carragenado</div>;
+  } else if (message !== "") {
     return (
-      <div>
-        carragenado
-      </div>
-    )
-  } else if (message !== '') {
-    return (
-      <Message msg={message} close={() => { setMessage('') }}/>
-    )
+      <Message
+        msg={message}
+        close={() => {
+          setMessage("");
+        }}
+      />
+    );
   }
   return (
     <main>
@@ -95,10 +106,11 @@ export default function Register() {
           </legend>
 
           <ul>
-            {selectedTeams.map((team) => (
-              <li key={team}>
-                {team}{" "}
+            {selectedTeams.map((team, index) => (
+              <li key={index}>
+                {team}
                 <button
+                  type="button"
                   onClick={() => {
                     removeSelectedTeam(team);
                   }}
@@ -109,19 +121,11 @@ export default function Register() {
             ))}
           </ul>
 
-          <input list="teams" />
+          <input list="teams" onKeyUp={addSelectedTeam}/>
           <datalist id="teams">
-            {teams.map((team) => {
+            {teams.map((team, index) => {
               if (!selectedTeams.includes(team)) {
-                return (
-                  <option
-                    key={team}
-                    onClick={() => {
-                      addSelectedTeam(team);
-                    }}
-                    value={team}
-                  />
-                );
+                return <option key={index} value={team} />;
               } else return null;
             })}
           </datalist>
