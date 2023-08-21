@@ -12,11 +12,16 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-button {
+input, button {
   outline: none;
   border: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none !important;
 }
