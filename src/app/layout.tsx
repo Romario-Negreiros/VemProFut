@@ -9,18 +9,15 @@ import userContext from "@/contexts/userContext";
 
 import type { User } from "@/contexts/userContext";
 
+import "./global.css";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
 
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
-        />
+        <title>VemProFut</title>
       </head>
       <body>
         <userContext.Provider value={{user, setUser}}>
