@@ -3,13 +3,17 @@
 
 import { useState } from "react";
 
-import Header from "../components/Header";
+import AppBar from "../components/AppBar";
 
 import userContext from "@/contexts/userContext";
 
 import type { User } from "@/contexts/userContext";
 
-import "./global.css";
+import "./globals.css";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
@@ -20,8 +24,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>VemProFut</title>
       </head>
       <body>
-        <userContext.Provider value={{user, setUser}}>
-          <Header />
+        <userContext.Provider value={{ user, setUser }}>
+          <AppBar />
           {children}
         </userContext.Provider>
       </body>
