@@ -18,6 +18,7 @@ import FormTextInput from "@/components/FormTextInput";
 
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
+import type { NextPage } from "next";
 import type { SubmitHandler } from "react-hook-form";
 
 import teams from "../../../teams.json";
@@ -38,7 +39,7 @@ const inputRules = {
   },
 };
 
-export default function Register() {
+const Register: NextPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [selectedTeams, setSelectedTeams] = useState<string[]>(d);
@@ -172,3 +173,5 @@ export default function Register() {
     </Box>
   );
 }
+
+export default Register;
