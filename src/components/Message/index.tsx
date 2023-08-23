@@ -3,12 +3,14 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
+import type { FC } from "react";
+
 interface Props {
   msg: string;
   close: () => void;
 }
 
-export default function Error ({ msg, close }: Props) {
+const Message: FC<Props> = ({ msg, close }) => {
   return (
     <Box sx={{ display: "grid", placeItems: "center", height: "calc(100vh - 64px)" }}>
       <Paper>
@@ -18,3 +20,5 @@ export default function Error ({ msg, close }: Props) {
     </Box>
   )
 };
+
+export default Message;
