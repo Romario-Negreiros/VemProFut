@@ -4,7 +4,19 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import LoadingButton from "@mui/lab/LoadingButton";
 import Message from "@/components/Message";
+import FormTextInput from "@/components/FormTextInput";
+
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 import type { SubmitHandler } from "react-hook-form";
 
@@ -18,7 +30,7 @@ interface Inputs {
   teams: string;
 }
 
-const inputValidationOptions = {
+const inputRules = {
   required: true,
   maxLength: {
     value: 50,
@@ -30,7 +42,7 @@ export default function Register() {
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [selectedTeams, setSelectedTeams] = useState<string[]>(d);
-  const { register, handleSubmit, reset } = useForm<Inputs>();
+  const { handleSubmit, reset, control, setError } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
@@ -64,13 +76,14 @@ export default function Register() {
   const addSelectedTeam = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" || event.key === "Unidentified") {
       if (selectedTeams.length >= 3) {
-        alert("n pode mais q 3");
+        setError("teams", { message: "Máximo de três times" });
+        event.currentTarget.value = "";
         return;
       }
 
       const selectedTeam = event.currentTarget.value;
       if (!teams.some((team) => team.toLowerCase().includes(selectedTeam.toLowerCase()))) {
-        alert("time n existe ou n cobrido por nois");
+        setError("teams", { message: "O time não existe ou não é cobrido pelo site" });
         return;
       }
 
@@ -83,9 +96,7 @@ export default function Register() {
     setSelectedTeams(selectedTeams.filter((sTeam) => (team !== sTeam ? sTeam : null)));
   };
 
-  if (isLoading) {
-    return <div>carragenado</div>;
-  } else if (message !== "") {
+ if (message !== "") {
     return (
       <Message
         msg={message}
@@ -96,43 +107,68 @@ export default function Register() {
     );
   }
   return (
-    <main>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("name", inputValidationOptions)} />
-        <input type="email" {...register("email", inputValidationOptions)} />
-        <fieldset>
-          <legend>
-            Escolha até <span>três</span> times que deseja receber notificações
-          </legend>
+    <Box sx={{ display: "grid", placeItems: "center", height: "calc(100vh - 64px)" }}>
+      <Paper
+        sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 3 }}
+        elevation={2}
+        component="form"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <Box sx={{ width: "100%" }}>
+          <FormTextInput name="name" control={control} label="Name" rules={inputRules} disabled={isLoading} />
+        </Box>
+        <Box sx={{ width: "100%" }}>
+          <FormTextInput name="email" control={control} label="Email" type="email" rules={inputRules} disabled={isLoading} />
+        </Box>
+        <Box>
+          <Typography align="center" variant="body1">
+            Escolha até <span style={{ fontWeight: "bold" }}>três</span> times que deseja receber notificações
+          </Typography>
 
-          <ul>
+          <List>
             {selectedTeams.map((team, index) => (
-              <li key={index}>
-                {team}
-                <button
-                  type="button"
+              <ListItem key={index}>
+                <ListItemText primary={team} />
+                <ListItemButton
+                  sx={{ flexGrow: 0, lineHeight: 0 }}
+                  disabled={isLoading}
                   onClick={() => {
                     removeSelectedTeam(team);
                   }}
                 >
-                  [X]
-                </button>
-              </li>
+                  <Typography sx={{ margin: "auto" }}>
+                    <HighlightOffIcon />
+                  </Typography>
+                </ListItemButton>
+              </ListItem>
             ))}
-          </ul>
+          </List>
 
-          <input list="teams" onKeyUp={addSelectedTeam}/>
-          <datalist id="teams">
+          <FormTextInput
+            name="teams"
+            control={control}
+            label="Seleione os times"
+            disabled={isLoading || selectedTeams.length >= 3}
+            inputProps={{ list: "teams-list", onKeyUp: addSelectedTeam }}
+          />
+          <datalist id="teams-list">
             {teams.map((team, index) => {
               if (!selectedTeams.includes(team)) {
                 return <option key={index} value={team} />;
               } else return null;
             })}
           </datalist>
-        </fieldset>
+        </Box>
 
-        <button type="submit">Registrar</button>
-      </form>
-    </main>
+        {isLoading ? (
+          <LoadingButton loading variant="outlined">
+            Registrar  
+          </LoadingButton>
+        ) : (
+        <Button type="submit" variant="outlined">
+          Registrar
+        </Button>)}
+      </Paper>
+    </Box>
   );
 }
