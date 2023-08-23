@@ -13,9 +13,11 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
 
+import type { FC } from "react";
+
 const pages = ["clubes", "campeonatos", "registrar", "notificações"];
 
-const AppBar = () => {
+const AppBar: FC = () => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
