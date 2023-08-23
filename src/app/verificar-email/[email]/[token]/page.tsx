@@ -3,6 +3,8 @@
 import { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/navigation";
 
+import Box from "@mui/material/Box";
+import CircularProgress from "@mui/material/CircularProgress";
 import Message from "@/components/Message";
 
 import userContext from "@/contexts/userContext";
@@ -20,7 +22,7 @@ interface Props {
 
 const VerifyEmail: NextPage<Props> = ({ params }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [message, setMessage] = useState("");
   const { email, token } = params;
   const { setUser } = useContext(userContext);
   const { push } = useRouter();
@@ -28,10 +30,13 @@ const VerifyEmail: NextPage<Props> = ({ params }) => {
   const verifyEmail = async () => {
     try {
       const fetchOptions: RequestInit = {
-        method: "PUT"
-      }
+        method: "PUT",
+      };
 
-      const response = await fetch(`http://localhost:5000/api/users/verify-email/${email.replace(/[%]{1}[0-9]*/, "@")}/${token}`, fetchOptions);
+      const response = await fetch(
+        `http://localhost:5000/api/users/verify-email/${email.replace(/[%]{1}[0-9]*/, "@")}/${token}`,
+        fetchOptions
+      );
 
       if (response.ok) {
         const body = await response.json();
@@ -39,28 +44,27 @@ const VerifyEmail: NextPage<Props> = ({ params }) => {
         push("/");
       } else {
         const error = await response.text();
-        
+
         throw new Error(error);
       }
     } catch (err) {
       console.log(err);
       if (err instanceof Error) {
-        setError(err.message);
-      };
-    } finally {
-      setIsLoading(false);
+        setIsLoading(false);
+        setMessage(err.message);
+      }
     }
   };
 
   useEffect(() => {
     if (email === undefined || email === null) {
-      alert("O parâmetro 'email' está faltando.")
-      return
+      alert("O parâmetro 'email' está faltando.");
+      return;
     }
 
     if (token === undefined || token === null) {
-      alert("O parâmetro 'token' está faltando.")
-      return
+      alert("O parâmetro 'token' está faltando.");
+      return;
     }
 
     void verifyEmail();
@@ -69,20 +73,19 @@ const VerifyEmail: NextPage<Props> = ({ params }) => {
 
   if (isLoading) {
     return (
-      <div>
-        carregando mano
-      </div>
-    )
-  } else if (error !== '') {
-    return (
-      <Message msg={error} close={() => { setError('') }} />
-    )
+      <Box sx={{ display: "grid", placeItems: "center", height: "calc(100vh - 64px)" }}>
+        <CircularProgress />
+      </Box>
+    );
   }
   return (
-    <div>
-      email verificado irmao
-    </div>
-  )
+    <Message
+      msg={message}
+      close={() => {
+        setMessage("");
+      }}
+    />
+  );
 };
 
 export default VerifyEmail;
