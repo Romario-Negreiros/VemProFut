@@ -12,12 +12,15 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
+import IconButton from "@mui/material/Button";
+import ReadMoreIcon from "@mui/icons-material/ReadMore";
 import Image from "next/image";
 import { TableVirtuoso } from "react-virtuoso";
 
 import teamsWithLogos from "../../../teamsWithLogos.json";
 
 import type { NextPage } from "next";
+import Link from "next/link";
 
 const TableComponents = {
   Scroller: forwardRef<HTMLDivElement>((props, ref) => <TableContainer component={Paper} {...props} ref={ref} />),
@@ -62,6 +65,7 @@ const Teams: NextPage = () => {
               <TableCell>Escudo</TableCell>
               <TableCell>Nome</TableCell>
               <TableCell>País</TableCell>
+              <TableCell size="small" sx={{ padding: 0 }}></TableCell>
             </TableRow>
           )}
           itemContent={(_, team) => (
@@ -71,6 +75,13 @@ const Teams: NextPage = () => {
               </TableCell>
               <TableCell>{team.name}</TableCell>
               <TableCell>{team.country}</TableCell>
+              <TableCell size="small" sx={{ padding: 0, textAlign: "center" }}>
+                <IconButton sx={{ fontSize: 0, lineHeight: 0, minWidth: 0, padding: "5px" }}>
+                  <Link href={`/clubes/${team.name.toLowerCase()}`}>
+                    <ReadMoreIcon />
+                  </Link>
+                </IconButton>
+              </TableCell>
             </>
           )}
         />
