@@ -17,7 +17,7 @@ import ReadMoreIcon from "@mui/icons-material/ReadMore";
 import Image from "next/image";
 import { TableVirtuoso } from "react-virtuoso";
 
-import teamsWithLogos from "../../../teamsWithLogos.json";
+import appTeams from "../../../appTeams.json";
 
 import type { NextPage } from "next";
 import Link from "next/link";
@@ -34,13 +34,13 @@ TableComponents.Scroller.displayName = "Scroller";
 TableComponents.TableBody.displayName = "TableBody";
 
 const Teams: NextPage = () => {
-  const [teams, setTeams] = useState(teamsWithLogos);
+  const [teams, setTeams] = useState(appTeams);
 
   const filterTeams = throttle((ev: React.ChangeEvent<HTMLInputElement>) => {
     const searchValue = ev.target.value;
 
     if (searchValue !== "") {
-      const filteredTeams = teamsWithLogos.filter((team) => {
+      const filteredTeams = appTeams.filter((team) => {
         if (team.name.toLowerCase().includes(searchValue.toLowerCase())) {
           return team;
         }
@@ -48,7 +48,7 @@ const Teams: NextPage = () => {
       });
       setTeams(filteredTeams);
     } else {
-      setTeams(teamsWithLogos);
+      setTeams(appTeams);
     }
   });
 
@@ -77,7 +77,7 @@ const Teams: NextPage = () => {
               <TableCell>{team.country}</TableCell>
               <TableCell size="small" sx={{ padding: 0, textAlign: "center" }}>
                 <IconButton sx={{ fontSize: 0, lineHeight: 0, minWidth: 0, padding: "5px" }}>
-                  <Link href={`/clubes/${team.name.toLowerCase()}`}>
+                  <Link href={`/clubes/${team.id}`}>
                     <ReadMoreIcon />
                   </Link>
                 </IconButton>
