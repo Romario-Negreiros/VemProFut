@@ -21,9 +21,9 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import type { NextPage } from "next";
 import type { SubmitHandler } from "react-hook-form";
 
-import teams from "../../../teams.json";
+import appTeams from "../../../appTeams.json";
 
-const d = ["Corinthians", "PSG"];
+type Team = typeof appTeams[0]
 
 interface Inputs {
   name: string;
@@ -42,13 +42,13 @@ const inputRules = {
 const Register: NextPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState("");
-  const [selectedTeams, setSelectedTeams] = useState<string[]>(d);
+  const [selectedTeams, setSelectedTeams] = useState<Team[]>([]);
   const { handleSubmit, reset, control, setError } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
       setIsLoading(true);
-      const teams = selectedTeams.join(",");
+      const teams = selectedTeams.map(sTeam => sTeam.id).join(",");
       const fetchOptions: RequestInit = {
         method: "POST",
         body: JSON.stringify({ ...data, teams }),
@@ -82,8 +82,8 @@ const Register: NextPage = () => {
         return;
       }
 
-      const selectedTeam = event.currentTarget.value;
-      if (!teams.some((team) => team.toLowerCase().includes(selectedTeam.toLowerCase()))) {
+      const selectedTeam = appTeams.find(team => team.name.toLowerCase() === event.currentTarget.value.toLowerCase());
+      if (selectedTeam === undefined) {
         setError("teams", { message: "O time não existe ou não é cobrido pelo site" });
         return;
       }
@@ -93,8 +93,8 @@ const Register: NextPage = () => {
     }
   };
 
-  const removeSelectedTeam = (team: string) => {
-    setSelectedTeams(selectedTeams.filter((sTeam) => (team !== sTeam ? sTeam : null)));
+  const removeSelectedTeam = (team: Team) => {
+    setSelectedTeams(selectedTeams.filter((sTeam) => (team.id !== sTeam.id ? sTeam : null)));
   };
 
  if (message !== "") {
@@ -129,7 +129,7 @@ const Register: NextPage = () => {
           <List>
             {selectedTeams.map((team, index) => (
               <ListItem key={index}>
-                <ListItemText primary={team} />
+                <ListItemText primary={team.name} />
                 <ListItemButton
                   sx={{ flexGrow: 0, lineHeight: 0 }}
                   disabled={isLoading}
@@ -146,16 +146,16 @@ const Register: NextPage = () => {
           </List>
 
           <FormTextInput
-            name="teams"
+            name="appTeams"
             control={control}
             label="Seleione os times"
             disabled={isLoading || selectedTeams.length >= 3}
-            inputProps={{ list: "teams-list", onKeyUp: addSelectedTeam }}
+            inputProps={{ list: "appTeams-list", onKeyUp: addSelectedTeam }}
           />
-          <datalist id="teams-list">
-            {teams.map((team, index) => {
+          <datalist id="appTeams-list">
+            {appTeams.map((team, index) => {
               if (!selectedTeams.includes(team)) {
-                return <option key={index} value={team} />;
+                return <option key={index} value={team.name} />;
               } else return null;
             })}
           </datalist>
