@@ -59,11 +59,12 @@ const Register: NextPage = () => {
 
       const res = await fetch("http://localhost:5000/api/users/register", fetchOptions);
 
-      const body = await res.text();
-      if (res.ok) {
+      const { success, error } = await res.json();
+      if (error === undefined) {
         reset();
+        setMessage(success);
       }
-      setMessage(body);
+      throw new Error(error);
     } catch (err) {
       console.log(err);
       if (err instanceof Error) {
