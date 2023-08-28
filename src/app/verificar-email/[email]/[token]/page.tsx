@@ -38,15 +38,12 @@ const VerifyEmail: NextPage<Props> = ({ params }) => {
         fetchOptions
       );
 
-      if (response.ok) {
-        const body = await response.json();
-        setUser(body);
+      const { user, error } = await response.json();
+      if (error === undefined) {
+        setUser(user);
         push("/");
-      } else {
-        const error = await response.text();
-
-        throw new Error(error);
       }
+      throw new Error(error);
     } catch (err) {
       console.log(err);
       if (err instanceof Error) {
