@@ -60,22 +60,19 @@ const Team: NextPage<Props> = async ({ params: { teamId } }) => {
 
   return (
     <Container sx={{ display: "grid", placeItems: "center", minHeight: "calc(100vh - 64px)", padding: "15px" }}>
-      <Grid container sx={{ maxWidth: 900 }}>
+      <Grid container spacing={{ xs: 0, md: 2 }} sx={{ maxWidth: 900 }}>
         <Grid item xs={12} md={6}>
           <Typography variant="h5" sx={{ textAlign: "center" }}>
             {team.name}
           </Typography>
           <List>
-            <ListItem sx={{ height: { xs: "150px", md: "250px" } }}>
-              <Box sx={{ position: "relative", width: "100%", margin: "auto", maxWidth: team.name === team.country ? "300px" : "250px", height: "100%" }}>
+            <ListItem sx={{ height: "150px" }}>
+              <Box sx={{ position: "relative", width: "100%", margin: "auto", maxWidth: team.name === team.country ? "300px" : "150px", height: "100%" }}>
                 <Image
                   src={team.logo}
                   alt={team.name}
                   priority
                   fill
-                  style={{
-                    objectFit: "cover",
-                  }}
                 />
               </Box>
             </ListItem>
@@ -99,15 +96,12 @@ const Team: NextPage<Props> = async ({ params: { teamId } }) => {
           </Typography>
           <List>
             <ListItem sx={{ height: "250px" }}>
-              <Box sx={{ position: "relative", width: "100%", maxWidth: "500px", height: "100%", margin: "auto" }}>
+              <Box sx={{ position: "relative", width: "100%", maxWidth: "450px", height: "100%", margin: "auto" }}>
                 <Image
                   src={team.venue.image}
                   alt={team.venue.name}
                   priority
                   fill
-                  style={{
-                    objectFit: "cover",
-                  }}
                 />
               </Box>
             </ListItem>
