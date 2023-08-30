@@ -6,79 +6,79 @@
         "id": 684,
         "name": "Campeonato de Portugal Prio - Group H",
         "logo": "https://media-1.api-sports.io/football/leagues/684.png",
-        "start": "2020-09-20"
+        "start": "20-09-2020"
       },
       {
         "id": 683,
         "name": "Campeonato de Portugal Prio - Group G",
         "logo": "https://media-2.api-sports.io/football/leagues/683.png",
-        "start": "2020-09-20"
+        "start": "20-09-2020"
       },
       {
         "id": 681,
         "name": "Campeonato de Portugal Prio - Group E",
         "logo": "https://media-2.api-sports.io/football/leagues/681.png",
-        "start": "2021-08-29"
+        "start": "29-08-2021"
       },
       {
         "id": 682,
         "name": "Campeonato de Portugal Prio - Group F",
         "logo": "https://media-3.api-sports.io/football/leagues/682.png",
-        "start": "2021-08-29"
+        "start": "29-08-2021"
       },
       {
         "id": 991,
         "name": "Campeonato de Portugal Prio - Promotion Round",
         "logo": "https://media-2.api-sports.io/football/leagues/991.png",
-        "start": "2023-04-30"
+        "start": "30-04-2023"
       },
       {
         "id": 460,
         "name": "Campeonato de Portugal Prio - Group D",
         "logo": "https://media-1.api-sports.io/football/leagues/460.png",
-        "start": "2023-08-20"
+        "start": "20-08-2023"
       },
       {
         "id": 459,
         "name": "Campeonato de Portugal Prio - Group C",
         "logo": "https://media-1.api-sports.io/football/leagues/459.png",
-        "start": "2023-08-20"
+        "start": "20-08-2023"
       },
       {
         "id": 458,
         "name": "Campeonato de Portugal Prio - Group B",
         "logo": "https://media-3.api-sports.io/football/leagues/458.png",
-        "start": "2023-08-20"
+        "start": "20-08-2023"
       },
       {
         "id": 457,
         "name": "Campeonato de Portugal Prio - Group A",
         "logo": "https://media-2.api-sports.io/football/leagues/457.png",
-        "start": "2023-08-20"
+        "start": "20-08-2023"
       },
       {
         "id": 865,
         "name": "Liga 3",
         "logo": "https://media-3.api-sports.io/football/leagues/865.png",
-        "start": "2023-08-07"
+        "start": "07-08-2023"
       },
       {
         "id": 95,
         "name": "Segunda Liga",
         "logo": "https://media-2.api-sports.io/football/leagues/95.png",
-        "start": "2023-08-13"
+        "start": "13-08-2023"
       },
       {
         "id": 94,
         "name": "Primeira Liga",
         "logo": "https://media-1.api-sports.io/football/leagues/94.png",
-        "start": "2023-08-13"
+        "start": "13-08-2023"
       },
       {
         "id": 701,
         "name": "Liga Revelação U23",
         "logo": "https://media-1.api-sports.io/football/leagues/701.png",
-        "start": "2023-08-08"
+        "start": "08-08-2023"
       }
     ]
   ],
@@ -89,109 +89,109 @@
         "id": 139,
         "name": "Serie A Women",
         "logo": "https://media-2.api-sports.io/football/leagues/139.png",
-        "start": "2022-08-27"
+        "start": "27-08-2022"
       },
       {
         "id": 974,
         "name": "Serie C - Supercoppa Lega Finals",
         "logo": "https://media-1.api-sports.io/football/leagues/974.png",
-        "start": "2023-04-29"
+        "start": "29-04-2023"
       },
       {
         "id": 434,
         "name": "Serie D - Girone I",
         "logo": "https://media-3.api-sports.io/football/leagues/434.png",
-        "start": "2022-09-18"
+        "start": "18-09-2022"
       },
       {
         "id": 433,
         "name": "Serie D - Girone H",
         "logo": "https://media-2.api-sports.io/football/leagues/433.png",
-        "start": "2022-09-04"
+        "start": "04-09-2022"
       },
       {
         "id": 431,
         "name": "Serie D - Girone F",
         "logo": "https://media-2.api-sports.io/football/leagues/431.png",
-        "start": "2022-09-04"
+        "start": "04-09-2022"
       },
       {
         "id": 706,
         "name": "Campionato Primavera - 2",
         "logo": "https://media-3.api-sports.io/football/leagues/706.png",
-        "start": "2022-09-10"
+        "start": "10-09-2022"
       },
       {
         "id": 426,
         "name": "Serie D - Girone A",
         "logo": "https://media-1.api-sports.io/football/leagues/426.png",
-        "start": "2022-09-04"
+        "start": "04-09-2022"
       },
       {
         "id": 427,
         "name": "Serie D - Girone B",
         "logo": "https://media-1.api-sports.io/football/leagues/427.png",
-        "start": "2022-09-04"
+        "start": "04-09-2022"
       },
       {
         "id": 428,
         "name": "Serie D - Girone C",
         "logo": "https://media-3.api-sports.io/football/leagues/428.png",
-        "start": "2022-09-04"
+        "start": "04-09-2022"
       },
       {
         "id": 429,
         "name": "Serie D - Girone D",
         "logo": "https://media-3.api-sports.io/football/leagues/429.png",
-        "start": "2022-09-04"
+        "start": "04-09-2022"
       },
       {
         "id": 430,
         "name": "Serie D - Girone E",
         "logo": "https://media-3.api-sports.io/football/leagues/430.png",
-        "start": "2022-09-04"
+        "start": "04-09-2022"
       },
       {
         "id": 432,
         "name": "Serie D - Girone G",
         "logo": "https://media-1.api-sports.io/football/leagues/432.png",
-        "start": "2022-09-04"
+        "start": "04-09-2022"
       },
       {
         "id": 135,
         "name": "Serie A",
         "logo": "https://media-2.api-sports.io/football/leagues/135.png",
-        "start": "2023-08-19"
+        "start": "19-08-2023"
       },
       {
         "id": 136,
         "name": "Serie B",
         "logo": "https://media-2.api-sports.io/football/leagues/136.png",
-        "start": "2023-08-19"
+        "start": "19-08-2023"
       },
       {
         "id": 705,
         "name": "Campionato Primavera - 1",
         "logo": "https://media-1.api-sports.io/football/leagues/705.png",
-        "start": "2023-08-25"
+        "start": "25-08-2023"
       },
       {
         "id": 138,
         "name": "Serie C - Girone A",
         "logo": "https://media-2.api-sports.io/football/leagues/138.png",
-        "start": "2023-09-03"
+        "start": "03-09-2023"
       },
       {
         "id": 942,
         "name": "Serie C - Girone B",
         "logo": "https://media-2.api-sports.io/football/leagues/942.png",
-        "start": "2023-09-03"
+        "start": "03-09-2023"
       },
       {
         "id": 943,
         "name": "Serie C - Girone C",
         "logo": "https://media-2.api-sports.io/football/leagues/943.png",
-        "start": "2023-09-03"
+        "start": "03-09-2023"
       }
     ]
   ],
@@ -202,37 +202,37 @@
         "id": 827,
         "name": "Crown Prince Cup",
         "logo": "https://media-2.api-sports.io/football/leagues/827.png",
-        "start": "2017-09-07"
+        "start": "07-09-2017"
       },
       {
         "id": 309,
         "name": "Division 2",
         "logo": "https://media-2.api-sports.io/football/leagues/309.png",
-        "start": "2018-10-19"
+        "start": "19-10-2018"
       },
       {
         "id": 826,
         "name": "Super Cup",
         "logo": "https://media-1.api-sports.io/football/leagues/826.png",
-        "start": "2023-01-26"
+        "start": "26-01-2023"
       },
       {
         "id": 308,
         "name": "Division 1",
         "logo": "https://media-2.api-sports.io/football/leagues/308.png",
-        "start": "2023-08-14"
+        "start": "14-08-2023"
       },
       {
         "id": 307,
         "name": "Pro League",
         "logo": "https://media-1.api-sports.io/football/leagues/307.png",
-        "start": "2023-08-11"
+        "start": "11-08-2023"
       },
       {
         "id": 504,
         "name": "King's Cup",
         "logo": "https://media-2.api-sports.io/football/leagues/504.png",
-        "start": "2023-09-24"
+        "start": "24-09-2023"
       }
     ]
   ],
@@ -243,139 +243,139 @@
         "id": 59,
         "name": "Non League Premier - Northern",
         "logo": "https://media-3.api-sports.io/football/leagues/59.png",
-        "start": "2023-08-12"
+        "start": "12-08-2023"
       },
       {
         "id": 58,
         "name": "Non League Premier - Isthmian",
         "logo": "https://media-3.api-sports.io/football/leagues/58.png",
-        "start": "2023-08-12"
+        "start": "12-08-2023"
       },
       {
         "id": 52,
         "name": "Non League Div One - Isthmian North",
         "logo": "https://media-2.api-sports.io/football/leagues/52.png",
-        "start": "2023-08-11"
+        "start": "11-08-2023"
       },
       {
         "id": 933,
         "name": "Non League Div One - Southern Central",
         "logo": "https://media-2.api-sports.io/football/leagues/933.png",
-        "start": "2023-08-12"
+        "start": "12-08-2023"
       },
       {
         "id": 56,
         "name": "Non League Div One - Southern South",
         "logo": "https://media-2.api-sports.io/football/leagues/56.png",
-        "start": "2023-08-12"
+        "start": "12-08-2023"
       },
       {
         "id": 57,
         "name": "Non League Div One - Isthmian South East",
         "logo": "https://media-3.api-sports.io/football/leagues/57.png",
-        "start": "2023-08-12"
+        "start": "12-08-2023"
       },
       {
         "id": 54,
         "name": "Non League Div One - Northern West",
         "logo": "https://media-2.api-sports.io/football/leagues/54.png",
-        "start": "2023-08-12"
+        "start": "12-08-2023"
       },
       {
         "id": 55,
         "name": "Non League Div One - Northern Midlands",
         "logo": "https://media-2.api-sports.io/football/leagues/55.png",
-        "start": "2023-08-12"
+        "start": "12-08-2023"
       },
       {
         "id": 932,
         "name": "Non League Div One - Northern East",
         "logo": "https://media-2.api-sports.io/football/leagues/932.png",
-        "start": "2023-08-12"
+        "start": "12-08-2023"
       },
       {
         "id": 53,
         "name": "Non League Div One - Isthmian South Central",
         "logo": "https://media-2.api-sports.io/football/leagues/53.png",
-        "start": "2023-08-12"
+        "start": "12-08-2023"
       },
       {
         "id": 703,
         "name": "Professional Development League",
         "logo": "https://media-3.api-sports.io/football/leagues/703.png",
-        "start": "2023-08-14"
+        "start": "14-08-2023"
       },
       {
         "id": 702,
         "name": "Premier League 2 Division One",
         "logo": "https://media-1.api-sports.io/football/leagues/702.png",
-        "start": "2023-08-11"
+        "start": "11-08-2023"
       },
       {
         "id": 931,
         "name": "Non League Premier - Southern Central",
         "logo": "https://media-2.api-sports.io/football/leagues/931.png",
-        "start": "2023-08-05"
+        "start": "05-08-2023"
       },
       {
         "id": 60,
         "name": "Non League Premier - Southern South",
         "logo": "https://media-1.api-sports.io/football/leagues/60.png",
-        "start": "2023-08-05"
+        "start": "05-08-2023"
       },
       {
         "id": 44,
         "name": "FA WSL",
         "logo": "https://media-3.api-sports.io/football/leagues/44.png",
-        "start": "2023-10-01"
+        "start": "01-10-2023"
       },
       {
         "id": 699,
         "name": "Women's Championship",
         "logo": "https://media-1.api-sports.io/football/leagues/699.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 51,
         "name": "National League - South",
         "logo": "https://media-1.api-sports.io/football/leagues/51.png",
-        "start": "2023-08-05"
+        "start": "05-08-2023"
       },
       {
         "id": 50,
         "name": "National League - North",
         "logo": "https://media-1.api-sports.io/football/leagues/50.png",
-        "start": "2023-08-05"
+        "start": "05-08-2023"
       },
       {
         "id": 43,
         "name": "National League",
         "logo": "https://media-2.api-sports.io/football/leagues/43.png",
-        "start": "2023-08-05"
+        "start": "05-08-2023"
       },
       {
         "id": 40,
         "name": "Championship",
         "logo": "https://media-1.api-sports.io/football/leagues/40.png",
-        "start": "2023-08-04"
+        "start": "04-08-2023"
       },
       {
         "id": 42,
         "name": "League Two",
         "logo": "https://media-2.api-sports.io/football/leagues/42.png",
-        "start": "2023-08-05"
+        "start": "05-08-2023"
       },
       {
         "id": 41,
         "name": "League One",
         "logo": "https://media-2.api-sports.io/football/leagues/41.png",
-        "start": "2023-08-05"
+        "start": "05-08-2023"
       },
       {
         "id": 39,
         "name": "Premier League",
         "logo": "https://media-1.api-sports.io/football/leagues/39.png",
-        "start": "2023-08-11"
+        "start": "11-08-2023"
       }
     ]
   ],
@@ -386,43 +386,43 @@
         "id": 253,
         "name": "Major League Soccer",
         "logo": "https://media-2.api-sports.io/football/leagues/253.png",
-        "start": "2023-02-25"
+        "start": "25-02-2023"
       },
       {
         "id": 255,
         "name": "USL Championship",
         "logo": "https://media-2.api-sports.io/football/leagues/255.png",
-        "start": "2023-03-11"
+        "start": "11-03-2023"
       },
       {
         "id": 489,
         "name": "USL League One",
         "logo": "https://media-3.api-sports.io/football/leagues/489.png",
-        "start": "2023-03-17"
+        "start": "17-03-2023"
       },
       {
         "id": 254,
         "name": "NWSL Women",
         "logo": "https://media-1.api-sports.io/football/leagues/254.png",
-        "start": "2023-03-25"
+        "start": "25-03-2023"
       },
       {
         "id": 523,
         "name": "NISA",
         "logo": "https://media-2.api-sports.io/football/leagues/523.png",
-        "start": "2023-04-01"
+        "start": "01-04-2023"
       },
       {
         "id": 909,
         "name": "MLS Next Pro",
         "logo": "https://media-2.api-sports.io/football/leagues/909.png",
-        "start": "2023-03-25"
+        "start": "25-03-2023"
       },
       {
         "id": 256,
         "name": "USL League Two",
         "logo": "https://media-2.api-sports.io/football/leagues/256.png",
-        "start": "2023-05-06"
+        "start": "06-05-2023"
       }
     ]
   ],
@@ -433,127 +433,127 @@
         "id": 471,
         "name": "National 3 - Group L",
         "logo": "https://media-3.api-sports.io/football/leagues/471.png",
-        "start": "2022-08-27"
+        "start": "27-08-2022"
       },
       {
         "id": 472,
         "name": "National 3 - Group M",
         "logo": "https://media-2.api-sports.io/football/leagues/472.png",
-        "start": "2022-08-28"
+        "start": "28-08-2022"
       },
       {
         "id": 1029,
         "name": "National 3 - Group G",
         "logo": "https://media-3.api-sports.io/football/leagues/1029.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 470,
         "name": "National 3 - Group K",
         "logo": "https://media-2.api-sports.io/football/leagues/470.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 469,
         "name": "National 3 - Group J",
         "logo": "https://media-1.api-sports.io/football/leagues/469.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 468,
         "name": "National 3 - Group I",
         "logo": "https://media-3.api-sports.io/football/leagues/468.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 467,
         "name": "National 3 - Group H",
         "logo": "https://media-1.api-sports.io/football/leagues/467.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 466,
         "name": "National 3 - Group F",
         "logo": "https://media-3.api-sports.io/football/leagues/466.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 465,
         "name": "National 3 - Group E",
         "logo": "https://media-2.api-sports.io/football/leagues/465.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 464,
         "name": "National 3 - Group D",
         "logo": "https://media-1.api-sports.io/football/leagues/464.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 463,
         "name": "National 3 - Group C",
         "logo": "https://media-1.api-sports.io/football/leagues/463.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 462,
         "name": "National 3 - Group B",
         "logo": "https://media-2.api-sports.io/football/leagues/462.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 461,
         "name": "National 3 - Group A",
         "logo": "https://media-3.api-sports.io/football/leagues/461.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 70,
         "name": "National 2 - Group D",
         "logo": "https://media-1.api-sports.io/football/leagues/70.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 69,
         "name": "National 2 - Group C",
         "logo": "https://media-2.api-sports.io/football/leagues/69.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 68,
         "name": "National 2 - Group B",
         "logo": "https://media-2.api-sports.io/football/leagues/68.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 67,
         "name": "National 2 - Group A",
         "logo": "https://media-2.api-sports.io/football/leagues/67.png",
-        "start": "2023-08-26"
+        "start": "26-08-2023"
       },
       {
         "id": 63,
         "name": "National 1",
         "logo": "https://media-2.api-sports.io/football/leagues/63.png",
-        "start": "2023-08-11"
+        "start": "11-08-2023"
       },
       {
         "id": 64,
         "name": "Feminine Division 1",
         "logo": "https://media-3.api-sports.io/football/leagues/64.png",
-        "start": "2023-09-16"
+        "start": "16-09-2023"
       },
       {
         "id": 62,
         "name": "Ligue 2",
         "logo": "https://media-2.api-sports.io/football/leagues/62.png",
-        "start": "2023-08-05"
+        "start": "05-08-2023"
       },
       {
         "id": 61,
         "name": "Ligue 1",
         "logo": "https://media-2.api-sports.io/football/leagues/61.png",
-        "start": "2023-08-13"
+        "start": "13-08-2023"
       }
     ]
   ],
@@ -564,253 +564,253 @@
         "id": 76,
         "name": "Serie D",
         "logo": "https://media-2.api-sports.io/football/leagues/76.png",
-        "start": "2023-05-06"
+        "start": "06-05-2023"
       },
       {
         "id": 620,
         "name": "Cearense - 2",
         "logo": "https://media-1.api-sports.io/football/leagues/620.png",
-        "start": "2023-02-04"
+        "start": "04-02-2023"
       },
       {
         "id": 622,
         "name": "Pernambucano - 1",
         "logo": "https://media-3.api-sports.io/football/leagues/622.png",
-        "start": "2023-01-06"
+        "start": "06-01-2023"
       },
       {
         "id": 520,
         "name": "Acreano",
         "logo": "https://media-1.api-sports.io/football/leagues/520.png",
-        "start": "2023-03-05"
+        "start": "05-03-2023"
       },
       {
         "id": 615,
         "name": "Rondoniense",
         "logo": "https://media-1.api-sports.io/football/leagues/615.png",
-        "start": "2023-02-25"
+        "start": "25-02-2023"
       },
       {
         "id": 71,
         "name": "Serie A",
         "logo": "https://media-1.api-sports.io/football/leagues/71.png",
-        "start": "2023-04-15"
+        "start": "15-04-2023"
       },
       {
         "id": 74,
         "name": "Brasileiro Women",
         "logo": "https://media-2.api-sports.io/football/leagues/74.png",
-        "start": "2023-02-24"
+        "start": "24-02-2023"
       },
       {
         "id": 72,
         "name": "Serie B",
         "logo": "https://media-1.api-sports.io/football/leagues/72.png",
-        "start": "2023-04-14"
+        "start": "14-04-2023"
       },
       {
         "id": 75,
         "name": "Serie C",
         "logo": "https://media-3.api-sports.io/football/leagues/75.png",
-        "start": "2023-05-02"
+        "start": "02-05-2023"
       },
       {
         "id": 522,
         "name": "Amazonense",
         "logo": "https://media-2.api-sports.io/football/leagues/522.png",
-        "start": "2023-01-28"
+        "start": "28-01-2023"
       },
       {
         "id": 607,
         "name": "Roraimense",
         "logo": "https://media-1.api-sports.io/football/leagues/607.png",
-        "start": "2023-03-12"
+        "start": "12-03-2023"
       },
       {
         "id": 521,
         "name": "Amapaense",
         "logo": "https://media-2.api-sports.io/football/leagues/521.png",
-        "start": "2023-05-10"
+        "start": "10-05-2023"
       },
       {
         "id": 619,
         "name": "Mineiro - 2",
         "logo": "https://media-2.api-sports.io/football/leagues/619.png",
-        "start": "2023-04-29"
+        "start": "29-04-2023"
       },
       {
         "id": 613,
         "name": "Baiano - 2",
         "logo": "https://media-1.api-sports.io/football/leagues/613.png",
-        "start": "2023-05-14"
+        "start": "14-05-2023"
       },
       {
         "id": 614,
         "name": "Paranaense - 2",
         "logo": "https://media-1.api-sports.io/football/leagues/614.png",
-        "start": "2023-04-29"
+        "start": "29-04-2023"
       },
       {
         "id": 936,
         "name": "Catarinense - 2",
         "logo": "https://media-1.api-sports.io/football/leagues/936.png",
-        "start": "2023-05-27"
+        "start": "27-05-2023"
       },
       {
         "id": 478,
         "name": "Gaúcho - 2",
         "logo": "https://media-2.api-sports.io/football/leagues/478.png",
-        "start": "2023-04-15"
+        "start": "15-04-2023"
       },
       {
         "id": 625,
         "name": "Carioca - 2",
         "logo": "https://media-1.api-sports.io/football/leagues/625.png",
-        "start": "2023-09-09"
+        "start": "09-09-2023"
       },
       {
         "id": 1030,
         "name": "Goiano - 2",
         "logo": "https://media-2.api-sports.io/football/leagues/1030.png",
-        "start": "2023-08-05"
+        "start": "05-08-2023"
       },
       {
         "id": 616,
         "name": "Potiguar",
         "logo": "https://media-3.api-sports.io/football/leagues/616.png",
-        "start": "2023-01-09"
+        "start": "09-01-2023"
       },
       {
         "id": 477,
         "name": "Gaúcho - 1",
         "logo": "https://media-3.api-sports.io/football/leagues/477.png",
-        "start": "2023-01-20"
+        "start": "20-01-2023"
       },
       {
         "id": 624,
         "name": "Carioca - 1",
         "logo": "https://media-3.api-sports.io/football/leagues/624.png",
-        "start": "2023-01-13"
+        "start": "13-01-2023"
       },
       {
         "id": 77,
         "name": "Alagoano",
         "logo": "https://media-1.api-sports.io/football/leagues/77.png",
-        "start": "2023-01-14"
+        "start": "14-01-2023"
       },
       {
         "id": 475,
         "name": "Paulista - A1",
         "logo": "https://media-3.api-sports.io/football/leagues/475.png",
-        "start": "2023-01-14"
+        "start": "14-01-2023"
       },
       {
         "id": 609,
         "name": "Cearense - 1",
         "logo": "https://media-1.api-sports.io/football/leagues/609.png",
-        "start": "2023-01-14"
+        "start": "14-01-2023"
       },
       {
         "id": 628,
         "name": "Goiano - 1",
         "logo": "https://media-1.api-sports.io/football/leagues/628.png",
-        "start": "2023-01-10"
+        "start": "10-01-2023"
       },
       {
         "id": 603,
         "name": "Paraibano",
         "logo": "https://media-2.api-sports.io/football/leagues/603.png",
-        "start": "2023-01-06"
+        "start": "06-01-2023"
       },
       {
         "id": 608,
         "name": "Maranhense",
         "logo": "https://media-2.api-sports.io/football/leagues/608.png",
-        "start": "2023-01-11"
+        "start": "11-01-2023"
       },
       {
         "id": 605,
         "name": "Paulista - A3",
         "logo": "https://media-2.api-sports.io/football/leagues/605.png",
-        "start": "2023-01-20"
+        "start": "20-01-2023"
       },
       {
         "id": 476,
         "name": "Paulista - A2",
         "logo": "https://media-2.api-sports.io/football/leagues/476.png",
-        "start": "2023-01-13"
+        "start": "13-01-2023"
       },
       {
         "id": 629,
         "name": "Mineiro - 1",
         "logo": "https://media-2.api-sports.io/football/leagues/629.png",
-        "start": "2023-01-20"
+        "start": "20-01-2023"
       },
       {
         "id": 602,
         "name": "Baiano - 1",
         "logo": "https://media-3.api-sports.io/football/leagues/602.png",
-        "start": "2023-01-10"
+        "start": "10-01-2023"
       },
       {
         "id": 626,
         "name": "Sergipano",
         "logo": "https://media-3.api-sports.io/football/leagues/626.png",
-        "start": "2023-01-13"
+        "start": "13-01-2023"
       },
       {
         "id": 606,
         "name": "Paranaense - 1",
         "logo": "https://media-1.api-sports.io/football/leagues/606.png",
-        "start": "2023-01-14"
+        "start": "14-01-2023"
       },
       {
         "id": 630,
         "name": "Matogrossense",
         "logo": "https://media-1.api-sports.io/football/leagues/630.png",
-        "start": "2023-01-21"
+        "start": "21-01-2023"
       },
       {
         "id": 604,
         "name": "Catarinense - 1",
         "logo": "https://media-3.api-sports.io/football/leagues/604.png",
-        "start": "2023-01-13"
+        "start": "13-01-2023"
       },
       {
         "id": 611,
         "name": "Capixaba",
         "logo": "https://media-1.api-sports.io/football/leagues/611.png",
-        "start": "2023-01-19"
+        "start": "19-01-2023"
       },
       {
         "id": 621,
         "name": "Piauiense",
         "logo": "https://media-2.api-sports.io/football/leagues/621.png",
-        "start": "2023-01-07"
+        "start": "07-01-2023"
       },
       {
         "id": 623,
         "name": "Sul-Matogrossense",
         "logo": "https://media-1.api-sports.io/football/leagues/623.png",
-        "start": "2023-01-22"
+        "start": "22-01-2023"
       },
       {
         "id": 631,
         "name": "Tocantinense",
         "logo": "https://media-1.api-sports.io/football/leagues/631.png",
-        "start": "2023-01-28"
+        "start": "28-01-2023"
       },
       {
         "id": 610,
         "name": "Brasiliense",
         "logo": "https://media-1.api-sports.io/football/leagues/610.png",
-        "start": "2023-01-28"
+        "start": "28-01-2023"
       },
       {
         "id": 627,
         "name": "Paraense",
         "logo": "https://media-1.api-sports.io/football/leagues/627.png",
-        "start": "2023-02-05"
+        "start": "05-02-2023"
       }
     ]
   ],
@@ -821,43 +821,43 @@
         "id": 128,
         "name": "Liga Profesional Argentina",
         "logo": "https://media-2.api-sports.io/football/leagues/128.png",
-        "start": "2023-01-26"
+        "start": "26-01-2023"
       },
       {
         "id": 129,
         "name": "Primera Nacional",
         "logo": "https://media-1.api-sports.io/football/leagues/129.png",
-        "start": "2023-02-04"
+        "start": "04-02-2023"
       },
       {
         "id": 131,
         "name": "Primera B Metropolitana",
         "logo": "https://media-1.api-sports.io/football/leagues/131.png",
-        "start": "2023-02-10"
+        "start": "10-02-2023"
       },
       {
         "id": 132,
         "name": "Primera C",
         "logo": "https://media-1.api-sports.io/football/leagues/132.png",
-        "start": "2023-01-27"
+        "start": "27-01-2023"
       },
       {
         "id": 133,
         "name": "Primera D",
         "logo": "https://media-3.api-sports.io/football/leagues/133.png",
-        "start": "2023-03-18"
+        "start": "18-03-2023"
       },
       {
         "id": 134,
         "name": "Torneo Federal A",
         "logo": "https://media-3.api-sports.io/football/leagues/134.png",
-        "start": "2023-03-12"
+        "start": "12-03-2023"
       },
       {
         "id": 1032,
         "name": "Copa de la Liga Profesional",
         "logo": "https://media-1.api-sports.io/football/leagues/1032.png",
-        "start": "2023-08-17"
+        "start": "17-08-2023"
       }
     ]
   ],
@@ -868,19 +868,19 @@
         "id": 265,
         "name": "Primera División",
         "logo": "https://media-2.api-sports.io/football/leagues/265.png",
-        "start": "2023-01-22"
+        "start": "22-01-2023"
       },
       {
         "id": 266,
         "name": "Primera B",
         "logo": "https://media-2.api-sports.io/football/leagues/266.png",
-        "start": "2023-02-12"
+        "start": "12-02-2023"
       },
       {
         "id": 711,
         "name": "Segunda División",
         "logo": "https://media-2.api-sports.io/football/leagues/711.png",
-        "start": "2023-02-26"
+        "start": "26-02-2023"
       }
     ]
   ],
@@ -891,19 +891,19 @@
         "id": 268,
         "name": "Primera División - Apertura",
         "logo": "https://media-2.api-sports.io/football/leagues/268.png",
-        "start": "2023-02-03"
+        "start": "03-02-2023"
       },
       {
         "id": 269,
         "name": "Segunda División",
         "logo": "https://media-2.api-sports.io/football/leagues/269.png",
-        "start": "2023-03-04"
+        "start": "04-03-2023"
       },
       {
         "id": 270,
         "name": "Primera División - Clausura",
         "logo": "https://media-2.api-sports.io/football/leagues/270.png",
-        "start": "2023-08-18"
+        "start": "18-08-2023"
       }
     ]
   ],
@@ -914,157 +914,157 @@
         "id": 989,
         "name": "Oberliga - Relegation Round",
         "logo": "https://media-1.api-sports.io/football/leagues/989.png",
-        "start": "2023-03-11"
+        "start": "11-03-2023"
       },
       {
         "id": 988,
         "name": "Oberliga - Promotion Round",
         "logo": "https://media-1.api-sports.io/football/leagues/988.png",
-        "start": "2023-03-25"
+        "start": "25-03-2023"
       },
       {
         "id": 938,
         "name": "Oberliga - Bayern Nord",
         "logo": "https://media-2.api-sports.io/football/leagues/938.png",
-        "start": "2023-07-21"
+        "start": "21-07-2023"
       },
       {
         "id": 1034,
         "name": "2. Frauen Bundesliga",
         "logo": "https://media-1.api-sports.io/football/leagues/1034.png",
-        "start": "2023-08-19"
+        "start": "19-08-2023"
       },
       {
         "id": 754,
         "name": "Oberliga - Nordost-Nord",
         "logo": "https://media-2.api-sports.io/football/leagues/754.png",
-        "start": "2023-07-29"
+        "start": "29-07-2023"
       },
       {
         "id": 755,
         "name": "Oberliga - Nordost-Süd",
         "logo": "https://media-2.api-sports.io/football/leagues/755.png",
-        "start": "2023-07-28"
+        "start": "28-07-2023"
       },
       {
         "id": 750,
         "name": "Oberliga - Hessen",
         "logo": "https://media-1.api-sports.io/football/leagues/750.png",
-        "start": "2023-07-28"
+        "start": "28-07-2023"
       },
       {
         "id": 744,
         "name": "Oberliga - Schleswig-Holstein",
         "logo": "https://media-1.api-sports.io/football/leagues/744.png",
-        "start": "2023-07-28"
+        "start": "28-07-2023"
       },
       {
         "id": 745,
         "name": "Oberliga - Hamburg",
         "logo": "https://media-1.api-sports.io/football/leagues/745.png",
-        "start": "2023-07-28"
+        "start": "28-07-2023"
       },
       {
         "id": 752,
         "name": "Oberliga - Rheinland-Pfalz / Saar",
         "logo": "https://media-2.api-sports.io/football/leagues/752.png",
-        "start": "2023-07-28"
+        "start": "28-07-2023"
       },
       {
         "id": 746,
         "name": "Oberliga - Mittelrhein",
         "logo": "https://media-2.api-sports.io/football/leagues/746.png",
-        "start": "2023-08-11"
+        "start": "11-08-2023"
       },
       {
         "id": 751,
         "name": "Oberliga - Niederrhein",
         "logo": "https://media-3.api-sports.io/football/leagues/751.png",
-        "start": "2023-08-11"
+        "start": "11-08-2023"
       },
       {
         "id": 747,
         "name": "Oberliga - Westfalen",
         "logo": "https://media-2.api-sports.io/football/leagues/747.png",
-        "start": "2023-08-12"
+        "start": "12-08-2023"
       },
       {
         "id": 753,
         "name": "Oberliga - Baden-Württemberg",
         "logo": "https://media-2.api-sports.io/football/leagues/753.png",
-        "start": "2023-08-04"
+        "start": "04-08-2023"
       },
       {
         "id": 748,
         "name": "Oberliga - Niedersachsen",
         "logo": "https://media-3.api-sports.io/football/leagues/748.png",
-        "start": "2023-08-04"
+        "start": "04-08-2023"
       },
       {
         "id": 749,
         "name": "Oberliga - Bremen",
         "logo": "https://media-1.api-sports.io/football/leagues/749.png",
-        "start": "2023-08-11"
+        "start": "11-08-2023"
       },
       {
         "id": 939,
         "name": "Oberliga - Bayern Süd",
         "logo": "https://media-3.api-sports.io/football/leagues/939.png",
-        "start": "2023-07-21"
+        "start": "21-07-2023"
       },
       {
         "id": 87,
         "name": "Regionalliga - West",
         "logo": "https://media-3.api-sports.io/football/leagues/87.png",
-        "start": "2023-07-28"
+        "start": "28-07-2023"
       },
       {
         "id": 84,
         "name": "Regionalliga - Nord",
         "logo": "https://media-1.api-sports.io/football/leagues/84.png",
-        "start": "2023-07-28"
+        "start": "28-07-2023"
       },
       {
         "id": 86,
         "name": "Regionalliga - SudWest",
         "logo": "https://media-1.api-sports.io/football/leagues/86.png",
-        "start": "2023-08-04"
+        "start": "04-08-2023"
       },
       {
         "id": 83,
         "name": "Regionalliga - Bayern",
         "logo": "https://media-2.api-sports.io/football/leagues/83.png",
-        "start": "2023-07-20"
+        "start": "20-07-2023"
       },
       {
         "id": 85,
         "name": "Regionalliga - Nordost",
         "logo": "https://media-2.api-sports.io/football/leagues/85.png",
-        "start": "2023-07-28"
+        "start": "28-07-2023"
       },
       {
         "id": 488,
         "name": "U19 Bundesliga",
         "logo": "https://media-1.api-sports.io/football/leagues/488.png",
-        "start": "2023-08-13"
+        "start": "13-08-2023"
       },
       {
         "id": 80,
         "name": "3. Liga",
         "logo": "https://media-1.api-sports.io/football/leagues/80.png",
-        "start": "2023-08-05"
+        "start": "05-08-2023"
       },
       {
         "id": 78,
         "name": "Bundesliga",
         "logo": "https://media-3.api-sports.io/football/leagues/78.png",
-        "start": "2023-08-18"
+        "start": "18-08-2023"
       },
       {
         "id": 79,
         "name": "2. Bundesliga",
         "logo": "https://media-1.api-sports.io/football/leagues/79.png",
-        "start": "2023-07-28"
+        "start": "28-07-2023"
       }
     ]
   ],
@@ -1075,157 +1075,157 @@
         "id": 438,
         "name": "Primera División RFEF - Group 4",
         "logo": "https://media-3.api-sports.io/football/leagues/438.png",
-        "start": "2020-10-18"
+        "start": "18-10-2020"
       },
       {
         "id": 692,
         "name": "Primera División RFEF - Group 5",
         "logo": "https://media-3.api-sports.io/football/leagues/692.png",
-        "start": "2020-10-17"
+        "start": "17-10-2020"
       },
       {
         "id": 437,
         "name": "Primera División RFEF - Group 3",
         "logo": "https://media-1.api-sports.io/football/leagues/437.png",
-        "start": "2020-10-17"
+        "start": "17-10-2020"
       },
       {
         "id": 443,
         "name": "Tercera División RFEF - Group 5",
         "logo": "https://media-3.api-sports.io/football/leagues/443.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 454,
         "name": "Tercera División RFEF - Group 16",
         "logo": "https://media-2.api-sports.io/football/leagues/454.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 444,
         "name": "Tercera División RFEF - Group 6",
         "logo": "https://media-2.api-sports.io/football/leagues/444.png",
-        "start": "2023-09-09"
+        "start": "09-09-2023"
       },
       {
         "id": 445,
         "name": "Tercera División RFEF - Group 7",
         "logo": "https://media-1.api-sports.io/football/leagues/445.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 446,
         "name": "Tercera División RFEF - Group 8",
         "logo": "https://media-3.api-sports.io/football/leagues/446.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 447,
         "name": "Tercera División RFEF - Group 9",
         "logo": "https://media-2.api-sports.io/football/leagues/447.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 448,
         "name": "Tercera División RFEF - Group 10",
         "logo": "https://media-2.api-sports.io/football/leagues/448.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 449,
         "name": "Tercera División RFEF - Group 11",
         "logo": "https://media-3.api-sports.io/football/leagues/449.png",
-        "start": "2023-09-09"
+        "start": "09-09-2023"
       },
       {
         "id": 450,
         "name": "Tercera División RFEF - Group 12",
         "logo": "https://media-3.api-sports.io/football/leagues/450.png",
-        "start": "2023-09-09"
+        "start": "09-09-2023"
       },
       {
         "id": 452,
         "name": "Tercera División RFEF - Group 14",
         "logo": "https://media-3.api-sports.io/football/leagues/452.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 453,
         "name": "Tercera División RFEF - Group 15",
         "logo": "https://media-2.api-sports.io/football/leagues/453.png",
-        "start": "2023-09-09"
+        "start": "09-09-2023"
       },
       {
         "id": 455,
         "name": "Tercera División RFEF - Group 17",
         "logo": "https://media-1.api-sports.io/football/leagues/455.png",
-        "start": "2023-09-09"
+        "start": "09-09-2023"
       },
       {
         "id": 456,
         "name": "Tercera División RFEF - Group 18",
         "logo": "https://media-1.api-sports.io/football/leagues/456.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 451,
         "name": "Tercera División RFEF - Group 13",
         "logo": "https://media-2.api-sports.io/football/leagues/451.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 442,
         "name": "Tercera División RFEF - Group 4",
         "logo": "https://media-3.api-sports.io/football/leagues/442.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 441,
         "name": "Tercera División RFEF - Group 3",
         "logo": "https://media-2.api-sports.io/football/leagues/441.png",
-        "start": "2023-09-09"
+        "start": "09-09-2023"
       },
       {
         "id": 440,
         "name": "Tercera División RFEF - Group 2",
         "logo": "https://media-1.api-sports.io/football/leagues/440.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 439,
         "name": "Tercera División RFEF - Group 1",
         "logo": "https://media-3.api-sports.io/football/leagues/439.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 142,
         "name": "Primera División Femenina",
         "logo": "https://media-2.api-sports.io/football/leagues/142.png",
-        "start": "2023-09-10"
+        "start": "10-09-2023"
       },
       {
         "id": 436,
         "name": "Primera División RFEF - Group 2",
         "logo": "https://media-1.api-sports.io/football/leagues/436.png",
-        "start": "2023-08-27"
+        "start": "27-08-2023"
       },
       {
         "id": 435,
         "name": "Primera División RFEF - Group 1",
         "logo": "https://media-2.api-sports.io/football/leagues/435.png",
-        "start": "2023-08-27"
+        "start": "27-08-2023"
       },
       {
         "id": 141,
         "name": "Segunda División",
         "logo": "https://media-3.api-sports.io/football/leagues/141.png",
-        "start": "2023-08-13"
+        "start": "13-08-2023"
       },
       {
         "id": 140,
         "name": "La Liga",
         "logo": "https://media-2.api-sports.io/football/leagues/140.png",
-        "start": "2023-08-11"
+        "start": "11-08-2023"
       }
     ]
   ]
