@@ -60,9 +60,9 @@ const Leagues = () => {
                             width: "100%",
                             textDecoration: "none",
                           }}
-                          href={`/campeonatos/${country.name.toLowerCase()}/${league.id}`}
+                          href={`/campeonatos/${league.id}/${league.start.slice(0, 5)}`}
                         >
-                          <ListItemText primary={league.name} secondary={`Início: ${league.start}`} />
+                          <ListItemText primary={league.name} secondary={`Início: ${league.start.slice(-2) + "-" + league.start.slice(5,7) + "-" + league.start.slice(0, 4)}`} />
                           <Image src={league.logo} width={35} height={30} alt={league.name} />
                         </Link>
                       </ListItemButton>
