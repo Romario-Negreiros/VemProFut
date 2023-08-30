@@ -13,6 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import appLeaguesJSON from "../../../appLeagues.json";
+import { Box } from "@mui/material";
 
 interface Country {
   name: string;
@@ -42,10 +43,10 @@ const Leagues = () => {
                 aria-controls={`${country.name}-leagues`}
                 id={country.name}
               >
-                <Image src={country.flag} width={50} height={35} alt={country.name} />
-                <Typography component="div" sx={{ marginLeft: "5px" }}>
-                  {country.name} leagues
-                </Typography>
+                <Box sx={{ display: "flex", alignItems: "center", gap: "5px", width: "100%" }}>
+                  <Image src={country.flag} width={50} height={35} alt={country.name} />
+                  <Typography>{country.name}</Typography>
+                </Box>
               </AccordionSummary>
               <AccordionDetails>
                 <List>
@@ -60,9 +61,9 @@ const Leagues = () => {
                             width: "100%",
                             textDecoration: "none",
                           }}
-                          href={`/campeonatos/${league.id}/${league.start.slice(0, 5)}`}
+                          href={`/campeonatos/${league.id}/${league.start.slice(-4)}`}
                         >
-                          <ListItemText primary={league.name} secondary={`Início: ${league.start.slice(-2) + "-" + league.start.slice(5,7) + "-" + league.start.slice(0, 4)}`} />
+                          <ListItemText primary={league.name} secondary={`Início: ${league.start}`} />
                           <Image src={league.logo} width={35} height={30} alt={league.name} />
                         </Link>
                       </ListItemButton>
