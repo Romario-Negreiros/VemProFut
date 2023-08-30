@@ -86,11 +86,11 @@ const League: NextPage<Props> = async ({ params: { country, leagueId, season } }
         {league.name}
       </Typography>
       <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2px", margin: "5px 0 10px 0" }}>
-        <Image src={league.logo} width={65} height={60} alt={league.name} />
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Image src={league.flag} width={25} height={25} alt={league.name} style={{ marginRight: "5px" }} />
-          <Typography variant="body2"> - {country.charAt(0).toLowerCase() + country.substring(1)}</Typography>
-          <Typography variant="body2"> - {league.season}</Typography>
+        <Image src={league.logo} width={61} height={60} alt={league.name} />
+        <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
+          <Typography variant="body2">{country.charAt(0).toUpperCase() + country.substring(1)}</Typography>
+          <Image src={league.flag} width={25} height={25} alt={league.name} />
+          <Typography variant="body2">{league.season}</Typography>
         </Box>
       </Box>
       <TableContainer component={Paper}>
@@ -126,7 +126,7 @@ const League: NextPage<Props> = async ({ params: { country, leagueId, season } }
                       textDecoration: "none",
                     }}
                   >
-                    <Image src={standing.team.logo} width={30} height={25} alt={standing.team.name} />
+                    <Image src={standing.team.logo} width={30} height={29} alt={standing.team.name} />
                     {standing.team.name}
                   </Link>
                 </TableCell>
