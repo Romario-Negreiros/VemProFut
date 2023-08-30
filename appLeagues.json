@@ -83,7 +83,7 @@
     ]
   ],
   [
-    { "name": "Italy", "flag": "https://media-1.api-sports.io/flags/it.svg" },
+    { "name": "Itália", "flag": "https://media-1.api-sports.io/flags/it.svg" },
     [
       {
         "id": 139,
@@ -196,7 +196,7 @@
     ]
   ],
   [
-    { "name": "Saudi Arabia", "flag": "https://media-2.api-sports.io/flags/sa.svg" },
+    { "name": "Arabia Saúdita", "flag": "https://media-2.api-sports.io/flags/sa.svg" },
     [
       {
         "id": 827,
@@ -380,7 +380,7 @@
     ]
   ],
   [
-    { "name": "USA", "flag": "https://media-2.api-sports.io/flags/us.svg" },
+    { "name": "Estados Unidos", "flag": "https://media-2.api-sports.io/flags/us.svg" },
     [
       {
         "id": 253,
@@ -427,7 +427,7 @@
     ]
   ],
   [
-    { "name": "France", "flag": "https://media-2.api-sports.io/flags/fr.svg" },
+    { "name": "França", "flag": "https://media-2.api-sports.io/flags/fr.svg" },
     [
       {
         "id": 471,
@@ -558,7 +558,7 @@
     ]
   ],
   [
-    { "name": "Brazil", "flag": "https://media-2.api-sports.io/flags/br.svg" },
+    { "name": "Brasil", "flag": "https://media-2.api-sports.io/flags/br.svg" },
     [
       {
         "id": 76,
@@ -885,7 +885,7 @@
     ]
   ],
   [
-    { "name": "Uruguay", "flag": "https://media-2.api-sports.io/flags/uy.svg" },
+    { "name": "Uruguai", "flag": "https://media-2.api-sports.io/flags/uy.svg" },
     [
       {
         "id": 268,
@@ -908,7 +908,7 @@
     ]
   ],
   [
-    { "name": "Germany", "flag": "https://media-2.api-sports.io/flags/de.svg" },
+    { "name": "Alemanha", "flag": "https://media-2.api-sports.io/flags/de.svg" },
     [
       {
         "id": 989,
@@ -1069,7 +1069,7 @@
     ]
   ],
   [
-    { "name": "Spain", "flag": "https://media-1.api-sports.io/flags/es.svg" },
+    { "name": "Espanha", "flag": "https://media-1.api-sports.io/flags/es.svg" },
     [
       {
         "id": 438,
