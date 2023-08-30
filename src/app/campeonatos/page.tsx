@@ -33,7 +33,7 @@ const appLeagues = appLeaguesJSON as TAppLeagues[];
 
 const Leagues = () => {
   return (
-    <Container sx={{ display: "grid", placeItems: "center", minHeight: "calc(100vh - 64px)" }}>
+    <Container sx={{ display: "grid", placeItems: "center", minHeight: "calc(100vh - 64px)", padding: "5px" }}>
       <Grid container spacing={2}>
         {appLeagues.map(([country, leagues]) => (
           <Grid item xs={12} md={6} key={country.name}>
@@ -49,7 +49,12 @@ const Leagues = () => {
                 </Box>
               </AccordionSummary>
               <AccordionDetails>
-                <List>
+                <List
+                  sx={{
+                    overflow: "auto",
+                    maxHeight: 150
+                  }}
+                >
                   {leagues.map((league, index) => (
                     <ListItem key={index}>
                       <ListItemButton>
@@ -61,7 +66,7 @@ const Leagues = () => {
                             width: "100%",
                             textDecoration: "none",
                           }}
-                          href={`/campeonatos/${league.id}/${league.start.slice(-4)}`}
+                          href={`/campeonatos/${country.name.toLowerCase()}/${league.id}/${league.start.slice(-4)}`}
                         >
                           <ListItemText primary={league.name} secondary={`Início: ${league.start}`} />
                           <Image src={league.logo} width={35} height={30} alt={league.name} />
