@@ -66,14 +66,17 @@ const Team: NextPage<Props> = async ({ params: { teamId } }) => {
             {team.name}
           </Typography>
           <List>
-            <ListItem sx={{ height: "150px" }}>
-              <Box sx={{ position: "relative", width: "100%", margin: "auto", maxWidth: team.name === team.country ? "300px" : "150px", height: "100%" }}>
-                <Image
-                  src={team.logo}
-                  alt={team.name}
-                  priority
-                  fill
-                />
+            <ListItem sx={{ height: "250px" }}>
+              <Box
+                sx={{
+                  position: "relative",
+                  width: "100%",
+                  margin: "auto",
+                  maxWidth: team.name === team.country ? "300px" : "150px",
+                  height: team.name === team.country ? "200px" : "150px",
+                }}
+              >
+                <Image src={team.logo} alt={team.name} priority fill />
               </Box>
             </ListItem>
             <ListItem disablePadding>
@@ -97,12 +100,7 @@ const Team: NextPage<Props> = async ({ params: { teamId } }) => {
           <List>
             <ListItem sx={{ height: "250px" }}>
               <Box sx={{ position: "relative", width: "100%", maxWidth: "450px", height: "100%", margin: "auto" }}>
-                <Image
-                  src={team.venue.image}
-                  alt={team.venue.name}
-                  priority
-                  fill
-                />
+                <Image src={team.venue.image} alt={team.venue.name} priority fill />
               </Box>
             </ListItem>
             <ListItem disablePadding>
