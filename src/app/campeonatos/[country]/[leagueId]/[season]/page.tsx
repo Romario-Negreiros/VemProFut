@@ -138,8 +138,20 @@ const League: NextPage<Props> = async ({ params: { country, leagueId, season } }
                 <TableCell align="center">{standing.all.goals.for}</TableCell>
                 <TableCell align="center">{standing.all.goals.against}</TableCell>
                 <TableCell align="center">{standing.goalsDiff}</TableCell>
-                <TableCell align="center">
-                  {standing.form.split("").map((s) => (s === "W" ? "V" : s === "L" ? "D" : s === "D" ? "E" : ""))}
+                <TableCell align="center" sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
+                  {standing.form.split("").map((res, index) => {
+                    return (
+                      <Box
+                        key={index}
+                        sx={{
+                          width: "20px",
+                          height: "20px",
+                          borderRadius: "50%",
+                          bgcolor: res === "W" ? "success.main" : res === "L" ? "error.main" : res === "D" ? "text.secondary" : "",
+                        }}
+                      ></Box>
+                    );
+                  })}
                 </TableCell>
               </TableRow>
             ))}
