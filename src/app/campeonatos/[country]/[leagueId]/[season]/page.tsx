@@ -60,6 +60,9 @@ const getLeague = async (leagueId: string, season: string): Promise<ILeague> => 
     headers,
   });
   const body = await response.json();
+  if (body.errors.length !== 0) {
+    throw new Error(body.error);
+  }
   const league = body.response[0].league;
 
   return {
