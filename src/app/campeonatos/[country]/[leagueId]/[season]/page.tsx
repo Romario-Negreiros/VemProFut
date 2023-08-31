@@ -86,7 +86,7 @@ const League: NextPage<Props> = async ({ params: { country, leagueId, season } }
         {league.name}
       </Typography>
       <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2px", margin: "5px 0 10px 0" }}>
-        <Image src={league.logo} width={61} height={60} alt={league.name} />
+        <Image src={league.logo} width={61} height={60} alt={league.name} priority />
         <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
           <Typography variant="body2">{country.charAt(0).toUpperCase() + country.substring(1)}</Typography>
           <Image src={league.flag} width={25} height={25} alt={league.name} />
