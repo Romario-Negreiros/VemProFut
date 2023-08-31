@@ -18,11 +18,11 @@ export default function Home() {
           borderColor: "primary.main",
         }}
       >
-        <Typography component="h1" variant="h2" sx={{ textAlign: "center" }}>
-          O melhor site de futebol do Brasil!!
+        <Typography component="h1" variant="h2" sx={{ fontWeight: "700", letterSpacing: "5px", lineHeight: "4rem", textAlign: "center" }}>
+          O MELHOR SITE DE FUTEBOL DO BRASIL!!
         </Typography>
-        <Typography component="h2" variant="body2" sx={{ textAlign: "center" }}>
-          Tirando todos os outros.
+        <Typography component="h2" variant="body2" sx={{ textAlign: "center", marginTop: "5px" }}>
+          TIRANDO TODOS OS OUTROS.
         </Typography>
       </Paper>
       <Grid container sx={{ height: "50%" }} spacing={2}>
@@ -38,7 +38,7 @@ export default function Home() {
               borderColor: "primary.main",
             }}
           >
-            <Typography component="h3" variant="h5">
+            <Typography component="h3" variant="h6">
               Se registre e acompanhe o seu time do coração
             </Typography>
             <Typography component="p" variant="body1">
