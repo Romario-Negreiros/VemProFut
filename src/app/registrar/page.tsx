@@ -13,17 +13,19 @@ import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LoadingButton from "@mui/lab/LoadingButton";
+import Link from "@mui/material/Link";
+import NextLink from "next/link";
 import Message from "@/components/Message";
 import FormTextInput from "@/components/FormTextInput";
 
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 
 import type { NextPage } from "next";
 import type { SubmitHandler } from "react-hook-form";
 
 import appTeams from "../../../appTeams.json";
 
-type Team = typeof appTeams[0]
+type Team = (typeof appTeams)[0];
 
 interface Inputs {
   name: string;
@@ -53,7 +55,7 @@ const Register: NextPage = () => {
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
       setIsLoading(true);
-      const teams = selectedTeams.map(sTeam => sTeam.id);
+      const teams = selectedTeams.map((sTeam) => sTeam.id);
       const fetchOptions: RequestInit = {
         method: "POST",
         body: JSON.stringify({ ...data, teams }),
@@ -88,7 +90,7 @@ const Register: NextPage = () => {
         return;
       }
 
-      const selectedTeam = appTeams.find(team => team.name.toLowerCase() === event.currentTarget.value.toLowerCase());
+      const selectedTeam = appTeams.find((team) => team.name.toLowerCase() === event.currentTarget.value.toLowerCase());
       if (selectedTeam === undefined) {
         setError("teams", { message: "O time não existe ou não é cobrido pelo site" });
         return;
@@ -103,7 +105,7 @@ const Register: NextPage = () => {
     setSelectedTeams(selectedTeams.filter((sTeam) => (team.id !== sTeam.id ? sTeam : null)));
   };
 
- if (message !== "") {
+  if (message !== "") {
     return (
       <Message
         msg={message}
@@ -116,19 +118,36 @@ const Register: NextPage = () => {
   return (
     <Box sx={{ display: "grid", placeItems: "center", height: "calc(100vh - 64px)" }}>
       <Paper
-        sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 3 }}
+        sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 3, minWidth: "600px" }}
         elevation={2}
         component="form"
         onSubmit={handleSubmit(onSubmit)}
       >
+        <Typography component="h1" variant="h4" sx={{ margin: "auto" }}>
+          REGISTRE-SE
+        </Typography>
         <Box sx={{ width: "100%" }}>
           <FormTextInput name="name" control={control} label="Name" rules={inputRules} disabled={isLoading} />
         </Box>
         <Box sx={{ width: "100%" }}>
-          <FormTextInput name="email" control={control} label="Email" type="email" rules={inputRules} disabled={isLoading} />
+          <FormTextInput
+            name="email"
+            control={control}
+            label="Email"
+            type="email"
+            rules={inputRules}
+            disabled={isLoading}
+          />
         </Box>
         <Box sx={{ width: "100%" }}>
-          <FormTextInput name="password" control={control} label="Password" type="password" rules={inputRules} disabled={isLoading} />
+          <FormTextInput
+            name="password"
+            control={control}
+            label="Password"
+            type="password"
+            rules={inputRules}
+            disabled={isLoading}
+          />
         </Box>
         <Box>
           <Typography align="center" variant="body1">
@@ -169,18 +188,25 @@ const Register: NextPage = () => {
             })}
           </datalist>
         </Box>
+        <Box sx={{ width: "100%", textAlign: "center" }}>
+          <Typography>Já possui conta?</Typography>
+          <Link component={NextLink} href="/entrar">
+            <Typography variant="body2">ENTRE</Typography>
+          </Link>
+        </Box>
 
         {isLoading ? (
           <LoadingButton loading variant="outlined">
-            Registrar  
+            Registrar
           </LoadingButton>
         ) : (
-        <Button type="submit" variant="outlined">
-          Registrar
-        </Button>)}
+          <Button type="submit" variant="outlined">
+            Registrar
+          </Button>
+        )}
       </Paper>
     </Box>
   );
-}
+};
 
 export default Register;
