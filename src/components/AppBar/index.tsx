@@ -46,7 +46,7 @@ const AppBar: FC = () => {
               textDecoration: "none",
             }}
           >
-            LOGO
+            VEMPROFUT
           </Typography>
           <Typography
             variant="h5"
