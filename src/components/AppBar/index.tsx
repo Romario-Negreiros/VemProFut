@@ -18,7 +18,7 @@ import userContext from "@/contexts/userContext";
 
 import type { FC } from "react";
 
-const items = ["clubes", "campeonatos", "registrar", "acompanhar", "sair"];
+const items = ["clubes", "campeonatos", "acompanhar", "registrar", "entrar", "sair"];
 
 const AppBar: FC = () => {
   const { user, setUser } = useContext(userContext);
@@ -92,6 +92,7 @@ const AppBar: FC = () => {
             >
               {items.map((item) => {
                 if (item === "sair" && !user) return null;
+                else if ((item === "entrar" || item === "registrar") && user) return null;
                 else
                   return (
                     <MenuItem
@@ -101,7 +102,10 @@ const AppBar: FC = () => {
                         if (item === "sair") logOut();
                       }}
                     >
-                      <Link href={`/${item === "sair" ? "" : item}`}>
+                      <Link
+                        href={`/${item === "sair" ? "" : item}`}
+                        style={{ color: "inherit", textDecoration: "none" }}
+                      >
                         <Typography textAlign="center">{item.toUpperCase()}</Typography>
                       </Link>
                     </MenuItem>
@@ -112,6 +116,7 @@ const AppBar: FC = () => {
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {items.map((item) => {
               if (item === "sair" && !user) return null;
+              else if ((item === "entrar" || item === "registrar") && user) return null;
               else
                 return (
                   <Button
@@ -121,7 +126,9 @@ const AppBar: FC = () => {
                       if (item === "sair") logOut();
                     }}
                   >
-                    <Link href={`/${item === "sair" ? "" : item}`}>{item.toUpperCase()}</Link>
+                    <Link href={`/${item === "sair" ? "" : item}`} style={{ color: "inherit", textDecoration: "none" }}>
+                      {item.toUpperCase()}
+                    </Link>
                   </Button>
                 );
             })}
