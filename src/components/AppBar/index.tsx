@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import MUIAppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -14,11 +14,14 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
 
+import userContext from "@/contexts/userContext";
+
 import type { FC } from "react";
 
-const pages = ["clubes", "campeonatos", "registrar", "notificações"];
+const items = ["clubes", "campeonatos", "registrar", "acompanhar", "sair"];
 
 const AppBar: FC = () => {
+  const { user, setUser } = useContext(userContext);
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -27,6 +30,11 @@ const AppBar: FC = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const logOut = () => {
+    document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    setUser(null);
   };
 
   return (
@@ -82,21 +90,41 @@ const AppBar: FC = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link href={`/${page}`}>
-                    <Typography textAlign="center">{page.toUpperCase()}</Typography>
-                  </Link>
-                </MenuItem>
-              ))}
+              {items.map((item) => {
+                if (item === "sair" && !user) return null;
+                else
+                  return (
+                    <MenuItem
+                      key={item}
+                      onClick={() => {
+                        handleCloseNavMenu();
+                        if (item === "sair") logOut();
+                      }}
+                    >
+                      <Link href={`/${item === "sair" ? "" : item}`}>
+                        <Typography textAlign="center">{item.toUpperCase()}</Typography>
+                      </Link>
+                    </MenuItem>
+                  );
+              })}
             </Menu>
           </Box>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button key={page} sx={{ color: "white" }}> 
-                <Link href={`/${page}`}>{page.toUpperCase()}</Link>
-              </Button>
-            ))}
+            {items.map((item) => {
+              if (item === "sair" && !user) return null;
+              else
+                return (
+                  <Button
+                    key={item}
+                    sx={{ color: "white" }}
+                    onClick={() => {
+                      if (item === "sair") logOut();
+                    }}
+                  >
+                    <Link href={`/${item === "sair" ? "" : item}`}>{item.toUpperCase()}</Link>
+                  </Button>
+                );
+            })}
           </Box>
         </Toolbar>
       </Container>
