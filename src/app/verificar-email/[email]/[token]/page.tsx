@@ -38,9 +38,12 @@ const VerifyEmail: NextPage<Props> = ({ params }) => {
         fetchOptions
       );
 
-      const { user, error } = await response.json();
+      const { user, jwt, error } = await response.json();
       if (error === undefined) {
         setUser(user);
+        const jwtExpiration = new Date();
+        jwtExpiration.setHours(jwtExpiration.getHours() + 1);
+        document.cookie = `jwt=${jwt as string}; expires=${jwtExpiration.toUTCString()}`;
         push("/");
       }
       throw new Error(error);
