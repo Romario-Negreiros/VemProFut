@@ -1,6 +1,6 @@
+"use client";
 /* eslint-disable @typescript-eslint/no-misused-promises */
 
-"use client";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -28,11 +28,16 @@ type Team = typeof appTeams[0]
 interface Inputs {
   name: string;
   email: string;
+  password: string;
   teams: string;
 }
 
 const inputRules = {
   required: true,
+  minLength: {
+    value: 6,
+    message: "Minimo de 6 caracteres",
+  },
   maxLength: {
     value: 50,
     message: "Máximo de 50 caracteres",
@@ -48,7 +53,7 @@ const Register: NextPage = () => {
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
       setIsLoading(true);
-      const teams = selectedTeams.map(sTeam => sTeam.id).join(",");
+      const teams = selectedTeams.map(sTeam => sTeam.id);
       const fetchOptions: RequestInit = {
         method: "POST",
         body: JSON.stringify({ ...data, teams }),
@@ -57,7 +62,7 @@ const Register: NextPage = () => {
         },
       };
 
-      const res = await fetch("http://localhost:5000/api/users/register", fetchOptions);
+      const res = await fetch("http://localhost:5000/api/users/sign-in", fetchOptions);
 
       const { success, error } = await res.json();
       if (error === undefined) {
@@ -121,6 +126,9 @@ const Register: NextPage = () => {
         </Box>
         <Box sx={{ width: "100%" }}>
           <FormTextInput name="email" control={control} label="Email" type="email" rules={inputRules} disabled={isLoading} />
+        </Box>
+        <Box sx={{ width: "100%" }}>
+          <FormTextInput name="password" control={control} label="Password" type="password" rules={inputRules} disabled={isLoading} />
         </Box>
         <Box>
           <Typography align="center" variant="body1">
