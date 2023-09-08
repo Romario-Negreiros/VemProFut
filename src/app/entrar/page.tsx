@@ -104,7 +104,7 @@ const SignIn: NextPage = () => {
           <FormTextInput
             name="password"
             control={control}
-            label="Password"
+            label="Senha"
             type="password"
             rules={inputRules}
             disabled={isLoading}
