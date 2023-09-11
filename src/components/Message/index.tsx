@@ -1,6 +1,4 @@
-"use client";
-
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
@@ -25,12 +23,12 @@ const Message: FC<Props> = ({ msg, close, link }) => {
 
   return (
     <Box sx={{ display: "grid", placeItems: "center", height: "calc(100vh - 64px)" }}>
-      <Paper>
+      <Paper sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px", padding: "10px" }}>
         <Typography variant="body1">{msg}</Typography>
         <br />
         {link ? (
           <Link component={NextLink} href={link.href}>
-            {link.text}
+            <Typography>{link.text}</Typography>
           </Link>
         ) : null}
         {close ? (
