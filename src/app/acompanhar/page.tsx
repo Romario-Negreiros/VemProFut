@@ -131,36 +131,34 @@ const FollowedTeams: NextPage = () => {
     console.log(user);
     void (async () => {
       try {
-        //   if (!user) {
-        //     setMessage({
-        //       msg: "É preciso entrar com sua conta para visualizar esta página.",
-        //       link: {
-        //         href: "/entrar",
-        //         text: "ENTRE",
-        //       },
-        //     });
-        //     return;
-        //   }
-        //   if (!user.isActive) {
-        //     setMessage({
-        //       msg: "Sua conta ainda não está ativa, verifique seu email para terminar o registro.",
-        //     });
-        //     return;
-        //   }
-        //   if (!user.teams) {
-        //     setMessage({
-        //       msg: "Você não está acompanhando nenhum time. Caso queira mudar isso visite o seu perfil.",
-        //       link: {
-        //         href: `/perfil/${user.id}`,
-        //         text: "PERFIL",
-        //       },
-        //     });
-        //     return;
-        //   }
+          if (!user) {
+            setMessage({
+              msg: "É preciso entrar com sua conta para visualizar esta página.",
+              link: {
+                href: "/entrar",
+                text: "ENTRE",
+              },
+            });
+            return;
+          }
+          if (!user.isActive) {
+            setMessage({
+              msg: "Sua conta ainda não está ativa, verifique seu email para terminar o registro.",
+            });
+            return;
+          }
+          if (!user.teams) {
+            setMessage({
+              msg: "Você não está acompanhando nenhum time. Caso queira mudar isso visite o seu perfil.",
+              link: {
+                href: `/perfil/${user.id}`,
+                text: "PERFIL",
+              },
+            });
+            return;
+          }
 
-        const teamsData = await getTeamsData({
-          teams: [{ id: 127, name: "Coringudo fake", logo: "https://media-3.api-sports.io/football/teams/127.png" }],
-        });
+        const teamsData = await getTeamsData(user);
         setTeams(teamsData);
       } catch (error) {
         console.log(error);
