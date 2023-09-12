@@ -58,14 +58,14 @@ const SignIn: NextPage = () => {
       const res = await fetch("http://localhost:5000/api/users/sign-in", fetchOptions);
 
       const { user, jwt, error } = await res.json();
-      if (error === undefined) {
-        setUser(user);
-        const jwtExpiration = new Date();
-        jwtExpiration.setHours(jwtExpiration.getHours() + 1);
-        document.cookie = `jwt=${jwt as string}; expires=${jwtExpiration.toUTCString()}`;
-        push("/");
+      if (error !== undefined) {
+        throw new Error(error);
       }
-      throw new Error(error);
+      setUser(user);
+      const jwtExpiration = new Date();
+      jwtExpiration.setHours(jwtExpiration.getHours() + 1);
+      document.cookie = `jwt=${jwt as string}; expires=${jwtExpiration.toUTCString()}`;
+      push("/");
     } catch (error) {
       console.log(error);
       if (error instanceof Error) {
