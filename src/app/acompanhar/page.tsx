@@ -11,6 +11,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Typography from "@mui/material/Typography";
 import Message from "@/components/Message";
+import CircularProgress from "@mui/material/CircularProgress";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Image from "next/image";
 import Link from "next/link";
@@ -174,7 +175,11 @@ const FollowedTeams: NextPage = () => {
   }, []);
 
   if (isLoading) {
-    return <Container>carregando</Container>;
+    return (
+      <Container sx={{ display: "grid", placeItems: "center", minHeight: "calc(100vh - 64px)" }}>
+        <CircularProgress />
+      </Container>
+    );
   } else if (message) {
     return <Message msg={message.msg} close={message.close} link={message.link} />;
   } else if (!teams) {
@@ -259,20 +264,20 @@ const FollowedTeams: NextPage = () => {
                           <Typography variant="body2">{fixture.venue.name}</Typography>
                           <Typography variant="body2">{fixture.venue.city}</Typography>
                         </Box>
-                          <Box
-                            sx={{
-                              display: "flex",
-                              width: "100%",
-                              justifyContent: "space-between",
-                              alignItems: "center",
-                            }}
-                          >
-                            <Typography variant="body2">
-                              {new Date(fixture.timestamp * 1000).toLocaleDateString("pt-BR")} -
-                              {new Date(fixture.timestamp * 1000).toLocaleTimeString("pt-BR")}
-                            </Typography>
-                            <Typography variant="body2">Árbitro: {fixture.referee}</Typography>
-                          </Box>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            width: "100%",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                          }}
+                        >
+                          <Typography variant="body2">
+                            {new Date(fixture.timestamp * 1000).toLocaleDateString("pt-BR")} -
+                            {new Date(fixture.timestamp * 1000).toLocaleTimeString("pt-BR")}
+                          </Typography>
+                          <Typography variant="body2">Árbitro: {fixture.referee}</Typography>
+                        </Box>
                         <Box
                           sx={{
                             display: "flex",
