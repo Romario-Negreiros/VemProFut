@@ -112,6 +112,7 @@ const getTeamsData = async ({ teams }: User): Promise<Team[]> => {
         delete item.fixture.status.short;
         delete item.fixture.status.long;
         delete item.fixture.timezone;
+        delete item.fixture.periods;
         return { ...item.fixture, ...item.teams, goals: item.goals, ...item.score };
       });
       leagues.push({ ...data.league, ...data.seasons[0], fixtures });
@@ -128,7 +129,6 @@ const FollowedTeams: NextPage = () => {
   const { user } = useContext(userContext);
 
   useEffect(() => {
-    console.log(user);
     void (async () => {
       try {
           if (!user) {
