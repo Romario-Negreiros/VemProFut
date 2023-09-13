@@ -15,12 +15,12 @@ import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/Button";
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
 import Image from "next/image";
+import Link from "next/link";
 import { TableVirtuoso } from "react-virtuoso";
 
 import appTeams from "../../../appTeams.json";
 
 import type { NextPage } from "next";
-import Link from "next/link";
 
 const TableComponents = {
   Scroller: forwardRef<HTMLDivElement>((props, ref) => <TableContainer component={Paper} {...props} ref={ref} />),
