@@ -2,31 +2,31 @@ import { createContext } from "react";
 
 import type { Dispatch, SetStateAction } from "react";
 
-export interface UserTeam {
-  id?: number;
-  name?: string;
+export interface Team {
+  id: number;
+  name: string;
   code?: string;
-  country?: string;
-  translatedCountry?: string;
-  countryFlag?: string;
+  country: string;
+  translatedCountry: string;
+  countryFlag: string;
   founded?: number;
-  logo?: string;
+  logo: string;
   venue: {
-    id?: number;
-    name?: string;
+    id: number;
+    name: string;
     address?: string;
     city?: string;
-    capacity?: number;
+    capacity: number;
     surface?: string;
-    image?: string;
-  };
+    image: string;
+  } | null;
 }
 
 export interface User {
   id: number;
   name: string;
   email: string;
-  teams: UserTeam[];
+  teams: Team[];
   createdAt: string;
   isActive: number;
 }
