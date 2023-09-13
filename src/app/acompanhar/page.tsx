@@ -4,6 +4,7 @@ import { useState, useEffect, useContext } from "react";
 
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -20,61 +21,8 @@ import userContext from "@/contexts/userContext";
 
 import type { NextPage } from "next";
 import type { Props as IMessage } from "@/components/Message";
-import type { User, UserTeam } from "@/contexts/userContext";
-import { Paper } from "@mui/material";
-
-interface MatchScore {
-  home: number;
-  away: number;
-}
-
-interface Fixture {
-  id: number;
-  referee: string;
-  date: string;
-  timestamp: number;
-  periods: {
-    first: number;
-    second: number;
-  };
-  venue: {
-    id: number;
-    name: string;
-    city: string;
-  };
-  status: {
-    elapsed: number;
-  };
-  home: {
-    id: number;
-    name: string;
-    logo: string;
-    winner: boolean;
-  };
-  away: {
-    id: number;
-    name: string;
-    logo: string;
-    winner: boolean;
-  };
-  halftime: MatchScore;
-  fulltime: MatchScore;
-  extratime: Partial<MatchScore>;
-  penalty: Partial<MatchScore>;
-}
-
-interface League {
-  id: number;
-  name: string;
-  logo: string;
-  start: string;
-  end: string;
-  fixtures: Fixture[];
-}
-
-interface Team extends UserTeam {
-  leagues: League[];
-}
+import type { User } from "@/contexts/userContext";
+import type { FixturesFetchBody, LeaguesFetchBody, Team } from "./types"; 
 
 const getTeamsData = async ({ teams }: User): Promise<Team[]> => {
   const fetchOptions = {
@@ -92,30 +40,28 @@ const getTeamsData = async ({ teams }: User): Promise<Team[]> => {
       `https://v3.football.api-sports.io/leagues?current=true&team=${team.id as number}`,
       fetchOptions
     );
-    const leaguesFetchBody = (await leaguesFetchResponse.json()) as { response: any[] };
+    const leaguesFetchBody = (await leaguesFetchResponse.json()) as LeaguesFetchBody
     const leagues = [];
-    for (const data of leaguesFetchBody.response) {
-      console.log(data);
+    for (const leaguesFetchBodyItem of leaguesFetchBody.response) {
       const fixturesFetchResponse = await fetch(
-        `https://v3.football.api-sports.io/fixtures?league=${data.league.id as string}&season=${
-          data.seasons[0].year as string
+        `https://v3.football.api-sports.io/fixtures?league=${leaguesFetchBodyItem.league.id}&season=${
+          leaguesFetchBodyItem.seasons[0].year as number
         }&team=${team.id as number}`,
         fetchOptions
       );
-      const fixturesFetchBody = (await fixturesFetchResponse.json()) as { response: any[] };
-      delete data.seasons[0].coverage;
-      delete data.seasons[0].current;
-      delete data.seasons[0].year;
-      delete data.league.type;
-      const fixtures = fixturesFetchBody.response.map((item) => {
-        console.log(item);
-        delete item.fixture.status.short;
-        delete item.fixture.status.long;
-        delete item.fixture.timezone;
-        delete item.fixture.periods;
-        return { ...item.fixture, ...item.teams, goals: item.goals, ...item.score };
+      const fixturesFetchBody = (await fixturesFetchResponse.json()) as FixturesFetchBody;
+      delete leaguesFetchBodyItem.seasons[0].coverage;
+      delete leaguesFetchBodyItem.seasons[0].current;
+      delete leaguesFetchBodyItem.seasons[0].year;
+      delete leaguesFetchBodyItem.league.type;
+      const fixtures = fixturesFetchBody.response.map((fixturesFetchBodyItem) => {
+        delete fixturesFetchBodyItem.fixture.status.short;
+        delete fixturesFetchBodyItem.fixture.status.long;
+        delete fixturesFetchBodyItem.fixture.timezone;
+        delete fixturesFetchBodyItem.fixture.periods;
+        return { ...fixturesFetchBodyItem.fixture, ...fixturesFetchBodyItem.teams, goals: fixturesFetchBodyItem.goals, ...fixturesFetchBodyItem.score };
       });
-      leagues.push({ ...data.league, ...data.seasons[0], fixtures });
+      leagues.push({ ...leaguesFetchBodyItem.league, ...leaguesFetchBodyItem.seasons[0], fixtures });
     }
     teamsWithLeagues.push({ ...team, leagues });
   }
