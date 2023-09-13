@@ -12,43 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { NextPage } from "next";
-
-interface Props {
-  params: {
-    country: string;
-    leagueId: string;
-    season: string;
-  };
-}
-
-interface Standing {
-  all: {
-    played: number;
-    win: number;
-    lose: number;
-    draw: number;
-    goals: {
-      for: number;
-      against: number;
-    };
-  };
-  form: string;
-  goalsDiff: number;
-  points: number;
-  team: {
-    id: number;
-    name: string;
-    logo: string;
-  };
-}
-
-interface ILeague {
-  name: string;
-  season: number;
-  logo: string;
-  flag: string;
-  standings: Standing[];
-}
+import type { Props, Standing, ILeague } from "./types";
 
 const getLeague = async (leagueId: string, season: string): Promise<ILeague> => {
   const headers = new Headers({
