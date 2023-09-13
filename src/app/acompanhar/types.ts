@@ -1,4 +1,4 @@
-import type { UserTeam } from "@/contexts/userContext";
+import type { Team as UserTeam } from "@/contexts/userContext";
 
 export interface LeaguesFetchBody {
   response: Array<{
