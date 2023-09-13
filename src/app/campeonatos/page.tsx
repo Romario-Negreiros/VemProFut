@@ -1,4 +1,5 @@
 import Container from "@mui/material/Container";
+import Box from "@mui/material/Box"; 
 import Grid from "@mui/material/Grid";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -13,23 +14,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 import appLeaguesJSON from "../../../appLeagues.json";
-import { Box } from "@mui/material";
 
-interface Country {
-  name: string;
-  flag: string;
-}
+import type { AppLeagues } from "./types";
 
-interface League {
-  id: number;
-  name: string;
-  logo: string;
-  start: string;
-}
-
-type TAppLeagues = [Country, League[]];
-
-const appLeagues = appLeaguesJSON as TAppLeagues[];
+const appLeagues = appLeaguesJSON as AppLeagues[];
 
 const Leagues = () => {
   return (
