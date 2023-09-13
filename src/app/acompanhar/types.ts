@@ -3,25 +3,25 @@ import type { Team as UserTeam } from "@/contexts/userContext";
 export interface LeaguesFetchBody {
   response: Array<{
     league: {
-    id: number;
-    name: string;
-    type?: string;
-    logo: string;
-  },
-  country: {
-    name: string;
-    code: string;
-    flag: string;
-  },
-  seasons: Array<{
-    year?: number;
-    start: string;
-    end: string;
-    current?: string;
-    coverage?: any;
-  }>
-}>
-};
+      id: number;
+      name: string;
+      type?: string;
+      logo: string;
+    };
+    country: {
+      name: string;
+      code: string;
+      flag: string;
+    };
+    seasons: Array<{
+      year?: number;
+      start: string;
+      end: string;
+      current?: string;
+      coverage?: any;
+    }>;
+  }>;
+}
 
 export interface FixturesFetchBody {
   response: Array<{
@@ -29,10 +29,10 @@ export interface FixturesFetchBody {
       status: {
         short?: string;
         long?: string;
-      }
+      };
       timezone?: string;
       periods?: string;
-    }
+    };
     teams: any;
     goals: any;
     score: any;
