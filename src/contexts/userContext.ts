@@ -26,7 +26,7 @@ export interface User {
   id: number;
   name: string;
   email: string;
-  teams: Team[];
+  teams: Team[] | null;
   createdAt: string;
   isActive: number;
 }
