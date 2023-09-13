@@ -11,33 +11,7 @@ import Image from "next/image";
 import teams from "../../../../appTeams.json";
 
 import type { NextPage } from "next";
-
-interface ITeam {
-  id: number;
-  name: string;
-  code: string;
-  country: string;
-  countryFlag: string;
-  translatedCountry: string;
-  founded: number;
-  national: boolean;
-  logo: string;
-  venue: {
-    id: number;
-    name: string;
-    address: string;
-    city: string;
-    capacity: number;
-    surface: string;
-    image: string;
-  };
-}
-
-interface Props {
-  params: {
-    teamId: string;
-  };
-}
+import type { Props, ITeam } from "./types";
 
 export const generateStaticParams = () => {
   const paths = teams.map((team) => ({
