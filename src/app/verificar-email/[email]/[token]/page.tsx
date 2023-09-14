@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/navigation";
+import BackendError from "@/utils/BackendError";
 
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -39,20 +40,22 @@ const VerifyEmail: NextPage<Props> = ({ params }) => {
       );
 
       const { user, jwt, error } = await response.json();
-      if (error === undefined) {
-        setUser(user);
-        const jwtExpiration = new Date();
-        jwtExpiration.setHours(jwtExpiration.getHours() + 1);
-        document.cookie = `jwt=${jwt as string}; expires=${jwtExpiration.toUTCString()}`;
-        push("/");
+      if (error !== undefined) {
+        throw new BackendError(error, response.status);
       }
-      throw new Error(error);
-    } catch (err) {
-      console.log(err);
-      if (err instanceof Error) {
-        setIsLoading(false);
-        setMessage(err.message);
+      setUser(user);
+      const jwtExpiration = new Date();
+      jwtExpiration.setHours(jwtExpiration.getHours() + 1);
+      document.cookie = `jwt=${jwt as string}; expires=${jwtExpiration.toUTCString()}`;
+      push("/");
+    } catch (error) {
+      if (error instanceof BackendError) {
+        setMessage(error.message);
+      } else {
+        setMessage("Não foi possível completar a verificação.")
       }
+    } finally {
+      setIsLoading(true);
     }
   };
 
