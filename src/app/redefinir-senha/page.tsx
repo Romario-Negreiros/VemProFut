@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import BackendError from "@/utils/BackendError";
 
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
@@ -54,22 +55,24 @@ const ResetPassword: NextPage<Props> = ({ params: { email, token } }) => {
         },
       };
 
-      const res = await fetch(`http://localhost:5000/api/users/reset-password/${email}/${token}`, fetchOptions);
+      const response = await fetch(`http://localhost:5000/api/users/reset-password/${email}/${token}`, fetchOptions);
 
-      const { success, error } = await res.json();
-      if (error === undefined) {
+      const { success, error } = await response.json();
+      if (error !== undefined) {
+        throw new BackendError(error, response.status);
+      }
         reset();
         setMessage(success);
+      } catch (error) {
+        if (error instanceof BackendError) {
+          setMessage(error.message);
+        } else {
+          setMessage("Não foi possível completar a verificação.")
+        }
+        console.error(error);
+      } finally {
+        setIsLoading(true);
       }
-      throw new Error(error);
-    } catch (error) {
-      console.log(error);
-      if (error instanceof Error) {
-        setMessage(error.message);
-      }
-    } finally {
-      setIsLoading(false);
-    }
   };
 
   if (message !== "") {
