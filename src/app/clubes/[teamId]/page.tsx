@@ -1,3 +1,5 @@
+import BackendError from "@/utils/BackendError";
+
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -23,10 +25,10 @@ export const generateStaticParams = () => {
 const getTeam = async (teamId: string): Promise<ITeam> => {
   const response = await fetch(`http://localhost:5000/api/teams/get-one/${teamId}`);
   const { team, error } = await response.json();
-  if (error === undefined) {
-    return team;
+  if (error !== undefined) {
+    throw new BackendError(error, response.status);
   }
-  throw new Error(error);
+  return team;
 };
 
 const Team: NextPage<Props> = async ({ params: { teamId } }) => {
