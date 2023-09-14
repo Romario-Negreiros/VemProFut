@@ -67,7 +67,7 @@ const ResetPassword: NextPage<Props> = ({ params: { email, token } }) => {
         if (error instanceof BackendError) {
           setMessage(error.message);
         } else {
-          setMessage("Não foi possível completar a verificação.")
+          setMessage("Não foi possível completar a redefinição da senha.")
         }
         console.error(error);
       } finally {
