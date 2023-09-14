@@ -4,6 +4,7 @@
 import { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
+import BackendError from "@/utils/BackendError";
 
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
@@ -55,11 +56,11 @@ const SignIn: NextPage = () => {
         },
       };
 
-      const res = await fetch("http://localhost:5000/api/users/sign-in", fetchOptions);
+      const response = await fetch("http://localhost:5000/api/users/sign-in", fetchOptions);
 
-      const { user, jwt, error } = await res.json();
+      const { user, jwt, error } = await response.json();
       if (error !== undefined) {
-        throw new Error(error);
+        throw new BackendError(error, response.status);
       }
       setUser(user);
       const jwtExpiration = new Date();
@@ -67,12 +68,14 @@ const SignIn: NextPage = () => {
       document.cookie = `jwt=${jwt as string}; expires=${jwtExpiration.toUTCString()}`;
       push("/");
     } catch (error) {
-      console.log(error);
-      if (error instanceof Error) {
+      if (error instanceof BackendError) {
         setMessage(error.message);
+      } else {
+        setMessage("Não foi possível completar o login.");
       }
+      console.error(error);
     } finally {
-      setIsLoading(false);
+      setIsLoading(true);
     }
   };
 
