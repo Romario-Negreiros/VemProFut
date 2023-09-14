@@ -65,14 +65,14 @@ const Register: NextPage = () => {
         },
       };
 
-      const res = await fetch("http://localhost:5000/api/users/sign-in", fetchOptions);
+      const response = await fetch("http://localhost:5000/api/users/sign-in", fetchOptions);
 
-      const { success, error } = await res.json();
-      if (error === undefined) {
+      const { success, error } = await response.json();
+      if (error !== undefined) {
+        throw new BackendError(error, response.status);
+      }
         reset();
         setMessage(success);
-      }
-      throw new Error(error);
     } catch (error) {
       if (error instanceof BackendError) {
         setMessage(error.message);
