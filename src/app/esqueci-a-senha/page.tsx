@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import BackendError from "@/utils/BackendError";
 
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
@@ -47,21 +48,23 @@ const ForgotPassword: NextPage = () => {
         },
       };
 
-      const res = await fetch("http://localhost:5000/api/users/forgot-password", fetchOptions);
+      const response = await fetch("http://localhost:5000/api/users/forgot-password", fetchOptions);
 
-      const { success, error } = await res.json();
-      if (error === undefined) {
-        reset();
-        setMessage(success);
+      const { success, error } = await response.json();
+      if (error !== undefined) {
+        throw new BackendError(error, response.status);
       }
-      throw new Error(error);
+      reset();
+      setMessage(success);
     } catch (error) {
-      console.log(error);
-      if (error instanceof Error) {
+      if (error instanceof BackendError) {
         setMessage(error.message);
+      } else {
+        setMessage("Não foi possível completar a ação.");
       }
+      console.error(error);
     } finally {
-      setIsLoading(false);
+      setIsLoading(true);
     }
   };
 
