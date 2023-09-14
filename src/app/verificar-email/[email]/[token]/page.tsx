@@ -54,6 +54,7 @@ const VerifyEmail: NextPage<Props> = ({ params }) => {
       } else {
         setMessage("Não foi possível completar a verificação.")
       }
+      console.error(error);
     } finally {
       setIsLoading(true);
     }

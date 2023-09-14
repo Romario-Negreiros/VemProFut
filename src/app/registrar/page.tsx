@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import BackendError from "@/utils/BackendError";
 
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
@@ -72,13 +73,15 @@ const Register: NextPage = () => {
         setMessage(success);
       }
       throw new Error(error);
-    } catch (err) {
-      console.log(err);
-      if (err instanceof Error) {
-        setMessage(err.message);
+    } catch (error) {
+      if (error instanceof BackendError) {
+        setMessage(error.message);
+      } else {
+        setMessage("Não foi possível completar o registro.")
       }
+      console.error(error);
     } finally {
-      setIsLoading(false);
+      setIsLoading(true);
     }
   };
 
