@@ -31,9 +31,11 @@ export interface User {
   isActive: number;
 }
 
+export type SetUser = Dispatch<SetStateAction<User | null>>;
+
 interface IUserContext {
   user: User | null;
-  setUser: Dispatch<SetStateAction<User | null>>;
+  setUser: SetUser;
 }
 
 const defaultValue = {
