@@ -35,9 +35,9 @@ const getTeamsData = async ({ teams }: User): Promise<Team[]> => {
 
   const teamsWithLeagues: Team[] = [];
 
-  for (const team of teams) {
+  for (const team of teams as Team[]) {
     const leaguesFetchResponse = await fetch(
-      `https://v3.football.api-sports.io/leagues?current=true&team=${team.id as number}`,
+      `https://v3.football.api-sports.io/leagues?current=true&team=${team.id}`,
       fetchOptions
     );
     const leaguesFetchBody = (await leaguesFetchResponse.json()) as LeaguesFetchBody
@@ -46,7 +46,7 @@ const getTeamsData = async ({ teams }: User): Promise<Team[]> => {
       const fixturesFetchResponse = await fetch(
         `https://v3.football.api-sports.io/fixtures?league=${leaguesFetchBodyItem.league.id}&season=${
           leaguesFetchBodyItem.seasons[0].year as number
-        }&team=${team.id as number}`,
+        }&team=${team.id}`,
         fetchOptions
       );
       const fixturesFetchBody = (await fixturesFetchResponse.json()) as FixturesFetchBody;
@@ -151,7 +151,7 @@ const FollowedTeams: NextPage = () => {
             <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <Typography variant="h5">{team.name}</Typography>
               <Box sx={{ position: "relative", width: "80px", height: "80px" }}>
-                <Image src={team.logo as string} fill style={{ objectFit: "contain" }} alt={team.name as string} />
+                <Image src={team.logo} fill style={{ objectFit: "contain" }} alt={team.name} />
               </Box>
             </Box>
             <Typography variant="h6" sx={{ textAlign: "center", textTransform: "uppercase" }}>
