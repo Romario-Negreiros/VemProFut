@@ -111,6 +111,13 @@ const AppBar: FC = () => {
                     </MenuItem>
                   );
               })}
+              {user && (
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Link href={`/usuarios/${user.name}`} style={{ color: "inherit", textDecoration: "none" }}>
+                    <Typography textAlign="center">{user.name}</Typography>
+                  </Link>
+                </MenuItem>
+              )}
             </Menu>
           </Box>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -132,6 +139,13 @@ const AppBar: FC = () => {
                   </Button>
                 );
             })}
+            {user && (
+              <Button sx={{ color: "white" }}>
+                <Link href={`/usuarios/${user.name}`} style={{ color: "inherit", textDecoration: "none" }}>
+                  {user.name.toUpperCase()}
+                </Link>
+              </Button>
+            )}
           </Box>
         </Toolbar>
       </Container>
