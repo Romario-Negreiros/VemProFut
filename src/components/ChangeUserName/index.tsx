@@ -50,6 +50,7 @@ const ChangeUserName: FC<Props> = ({ user, setUser, jwt, handleCloseModal }) => 
       if (data.name === user.name) {
         setError("name", { message: "O novo nome não pode ser igual ao anterior." });
       }
+      setIsLoading(true);
 
       const fetchOptions = {
         method: "PUT",
