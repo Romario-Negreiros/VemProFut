@@ -18,7 +18,7 @@ import type { SubmitHandler } from "react-hook-form";
 
 interface Inputs {
   name: string;
-  password: string;
+  confirmPassword: string;
 }
 
 interface Props {
@@ -99,7 +99,7 @@ const ChangeUserName: FC<Props> = ({ user, setUser, jwt, handleCloseModal }) => 
         </Box>
         <Box sx={{ width: "100%" }}>
           <FormTextInput
-            name="password"
+            name="confirmPassword"
             control={control}
             label="Confirme a senha"
             type="password"
